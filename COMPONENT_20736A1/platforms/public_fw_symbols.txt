@@ -1,0 +1,257 @@
+# Place a '#' in the first column to indicate a comment
+#
+# This file defines OVERRIDE rules for PATCH and LIBRARY symbols.
+# Each symbol defined below is used in conjunction with the elf file symbol tables.
+#
+#
+# Comma Seperated Value file
+#
+# Name,     Type,     Visibility,     Rename Flag,     Rename Name,     Reserved Flag,
+#
+# Definitions
+#   Name
+#     <symbol name>    Name of exact symbol to find and modify (may exist in multiple elf files)
+#     <wildcard>       Wildcard is allowed.
+#                          *     match all SYMBOLS after this location in the name.    ie.  <wiced_*>
+#                                Sections are NOT supported at the moment with wildcards
+#     !~<wildcard>     Wildcard is explicitly not public (screened).
+#
+#                      Name is CASE-SENSITIVE and WHITE SPACE IN-sensitive at beginning or end of name.
+#
+#   Type
+#     SECTION          Indicates this entry applies to a Symbol (Function or Object) in the elf file
+#     SYMBOL           Indicates this entry applies to 1 or more sections of the same name
+#
+#   Visibility Status
+#     PUBLIC           Symbol will be exported and will be in the open (never mangled)
+#     no value         Defaults to NOT public, no symbol in .sym file
+#
+#   Rename Flag
+#     0        => No mangling will occur, use real name
+#     2        => Override symbol name with new name
+#     No Value => Defaults to 0
+#
+#   Rename Name
+#     No Value => Use Name
+#     Value    => Use the supplied value as the new name for the entry
+#                 1st char MUST be a letter
+#
+#####################################################################################################################################
+# Name,                                  Type ,        Status,   Rename Flag,     Rename Name,     Reserved Flag,
+#
+# public API renames
+#
+GPIO_*                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+aclk_*                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+adc_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleapp_*                     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleappcfa_*                  ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleappevt_*                  ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleappfifo_*                 ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleappfwu_*                  ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleapptimer_*                ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleapputil_*                 ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleapputils_*                ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+blecm_*                      ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+bleprofile_*                 ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+ble_trace*                   ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+blebat_*                     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+blecen_*                     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+blecli_*                     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+blecm_*                      ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+btn_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+cfa_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+devlpm_*                     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+emconinfo_*                  ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+gpio_*                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+gpiobtn_*                    ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+i2cm_*                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+irtx_*                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+keyscan_*                    ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+ksq_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+ldo_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+leatt_*                      ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+legattdb_*                   ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+lel2cap_*                    ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+lesmpkeys_*                  ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+memcpy                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+memcmp                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+mia_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+mpi_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+puart_*                      ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+pwm_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+quad_*                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+rtc_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+scroll_*                     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+spiffy_*                     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+spiffyd_*                    ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+strlen                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+syncp_*                      ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+__aeabi_memset               ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+__aeabi_memmove              ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+idle_saveThreadxAvailMem     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+wdog_restart                 ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+wdog_configure               ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+_tx_v7m_get_int              ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+_tx_v7m_disable_int          ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+_tx_v7m_set_int              ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+Config_SS_Location           ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+Config_DS_Location           ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+Config_and_Firmware_Status   ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+spi2PortConfig               ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+ulp_rand                     ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+rtcConfig                    ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+
+# Name,                                  Type ,        Status, Rename Flag,                      Rename Name, Reserved Flag,
+emconninfo_getSlaveLatency        ,      SYMBOL ,      PUBLIC,      2,      emconninfo_getPeripheralLatency ,              1
+emconninfo_setSlaveLatency        ,      SYMBOL ,      PUBLIC,      2,      emconninfo_setPeripheralLatency ,              1
+emconninfo_getRole                ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_setRole                ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_setPeerClkAccuracy     ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_getPeerClkAccuracy     ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_getPeerAddr            ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_getPeerAddrType        ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_getPeerPubAddr         ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_setPeerAddrType        ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_getConnInterval        ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_setConnInterval        ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_getSupervisionTimeout  ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_setSupervisionTimeout  ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_deviceBonded           ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_setDeviceBondedFlag    ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_clearDeviceBondedFlag  ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_linkEncrypted          ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_setLinkEncryptedFlag   ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+emconninfo_clearLinkEncryptedFlag ,      SYMBOL ,      PUBLIC,      0,                                      ,              1
+
+
+# Name,                                          Type ,      Status, Rename Flag,          Rename Name, Reserved Flag,
+lesmp_sendMasterId                          ,  SYMBOL ,      PUBLIC,      2,      lesmp_sendCentralId ,              1
+lesmp_leEncrypt                             ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_keygenS1                              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_log                                   ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_getLTK                                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_getTimerId                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_refreshSMPTimer                       ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendPktToL2cap                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendPairingFailed                     ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_getRand                               ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_xor                                   ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_formP2                                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_formP1                                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_verifySConf                           ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setTimerId                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_stopSMPTimer                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_restart                               ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendSigningInfo                       ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendIdAddrInfo                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendIdInfo                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendEncInfo                           ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendLTKReply                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendLocalRand                         ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_verifyMConf                           ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendConfirmation                      ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_calcSConf                             ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_calcMConf                             ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_calcLocalConf                         ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_calcLocalMConf                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendLTKNegReply                       ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_stateHandler                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_procCmdCompleteEvt                    ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_hciEvtHandler                         ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_l2capHandler                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setTimeout                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setPassKey                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setPtr                                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_init                                  ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_getPtr                                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setSMPRole                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setPairingParam                       ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_log1                                  ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setPairingMode                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_getRandwithCb                         ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_timerCb                               ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_getTimeout                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_startSMPTimer                         ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendPairingReq                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_startPairing                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendPairingRsp                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendSecurityRequest                   ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_aesEncrypt                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_logBytes                              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_connUp                                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_connDown                              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_regSMPResultCb                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_recvKey                               ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_endianFlipInPlace                     ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_endianFlipCopy                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_cmac                                  ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_verifySignature                       ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_linkEncrypted                         ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_checkEncryptionKeySize                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_clearCheckEncryptionKeySize           ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setCheckEncryptionKeySize             ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_ReturnInsufficientAuthentication      ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_clearReturnInsufficientAuthentication ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setReturnInsufficientAuthentication   ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_PairingNotPermitted                   ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_clearPairingNotPermitted              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setPairingNotPermitted                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_JustWorksNotPermitted                 ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_clearJustWorksNotPermitted            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setJustWorksNotPermitted              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_pairingModeTab                        ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_pinfo                                 ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_confFlag                              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_smpResultCb                           ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_randCb                                ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_minKeySize                            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_info                                  ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_stateHandlerGlue                      ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_formP1_patch                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_calcLocalConfGlue                     ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendPairingFailed_asm                 ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_stateHandlerAddin                     ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_getSMPState                           ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setSMPOOBdata                         ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setSMPassKey                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_PasskeyEntryNotPermitted              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_clearPasskeyEntryNotPermitted         ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setPasskeyEntryNotPermitted           ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_OOBNotPermitted                       ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_clearOOBNotPermitted                  ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setOOBNotPermitted                    ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_setPairingMode_patch                  ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_CheckPairingModePermission            ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendPairingReq_patch                  ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_getLTK_patch                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_ResponderPasskey                      ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_regSmpResponderPasskeyCb              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_sendPairingFailed_patch               ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_passkey_data                          ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+lesmp_oob_data                              ,  SYMBOL ,      PUBLIC,      0,                          ,              1
+
+# Name,                             Type ,      Status, Rename Flag,            Rename Name, Reserved Flag,
+lesmpapi_MasterId               , SYMBOL ,      PUBLIC,      2,     lesmpapi_CentralId     ,              1
+lesmpapi_MasterId_asm           , SYMBOL ,      PUBLIC,      2,     lesmpapi_CentralId_asm ,              1
+lesmpapi_MasterId_C             , SYMBOL ,      PUBLIC,      2,     lesmpapi_CentralId_C   ,              1
+lesmpapi_setLocalIRK            , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_setLocalLTK            , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_setLocalEDIV           , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_setLocalCSRK           , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_pairingReq             , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_pairingRsp             , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_pairingConf            , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_pairingRand            , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_pairingFailed          , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_EncInfo                , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_IdInfo                 , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_IdAddrInfo             , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_SigningInfo            , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_SecurityReq            , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_msgHandlerTable        , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_msgHandlerPtr          , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_pairingReqGlue         , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_pairingRspGlue         , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_EncInfo_patch          , SYMBOL ,      PUBLIC,      0,                            ,              1
+lesmpapi_ResponderPasskeyEvent  , SYMBOL ,      PUBLIC,      0,                            ,              1

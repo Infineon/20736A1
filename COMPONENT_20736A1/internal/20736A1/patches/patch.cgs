@@ -1,0 +1,1279 @@
+
+
+
+##$$DEFINE (DEBUG)
+DEFINITION <configdef20736a1.hdf>
+
+
+ENTRY "Config Data Version"
+{
+}
+
+ENTRY "Spiffy1 Clock Speed"
+{
+    "Speed" = 12000000
+}
+
+## Set to BT 4.0
+#ENTRY "Data" = "rm_SpecSupportBitMask"
+#{
+#    "Address" = 0x00200b35
+#
+#    "Data" =
+#     COMMENTED_BYTES
+#     {
+#        <hex> 17
+#     } END_COMMENTED_BYTES
+#}
+
+ENTRY "Data" = "enable_optimized_sfi_read"
+{
+	"Address" = 0x0020455c
+	"Data" =
+	COMMENTED_BYTES
+     {
+	   <hex>
+	   01
+	 } END_COMMENTED_BYTES
+}
+
+ENTRY "PMU Crystal Warm up Time"
+{
+   "Crystal warm up time" = 2800
+}
+
+#HW CQ BLTH03123454
+ENTRY "Data"="btrf_reg85BLE"
+{
+    # UINT32 btrf_reg85BLE
+    "Address"=0x00201188 # <<< $AUTOGEN(ADDR{btrf_reg85BLE})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           01 0f 00 00 # 0x00000f02
+        } END_COMMENTED_BYTES
+}
+
+
+#HW CQ BLTH03123454
+# settings for LE test mode
+ENTRY "Data"="synthPuCtrlBLE_test"
+{
+    #UINT32 synthPuCtrlBLE_test   = 0xc909;
+    "Address"=0x00201114 # <<< $AUTOGEN(ADDR{synthPuCtrlBLE_test})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           07 C9 00 00 # 0x0000c909
+        } END_COMMENTED_BYTES
+}
+
+#HW CQ BLTH03123454
+# settings for LE normal mode
+ENTRY "Data"="synthPuCtrlBLE"
+{
+    # UINT32 synthPuCtrlBLE
+    "Address"=0x00201144 # <<< $AUTOGEN(ADDR{synthPuCtrlBLE})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           09 C9 00 00 # 0x0000c909
+        } END_COMMENTED_BYTES
+}
+
+#HW CQ BLTH03123454
+ENTRY "Data"="kvcoCalPuCtrlBLE_test"
+{
+    # UINT32 kvcoCalPuCtrlBLE_test = 0xc100
+    "Address"=0x00201128 # <<< $AUTOGEN(ADDR{kvcoCalPuCtrlBLE_test})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           00 C1 00 00 # 0x0000c100
+        } END_COMMENTED_BYTES
+}
+
+#HW CQ BLTH03123454
+ENTRY "Data"="kvcoCalPuCtrlBLE"
+{
+    #UINT32 kvcoCalPuCtrlBLE      = 0xc100;
+    "Address"=0x00201158 # <<< $AUTOGEN(ADDR{kvcoCalPuCtrlBLE})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           00 C1 00 00 # 0x0000c100
+        } END_COMMENTED_BYTES
+}
+
+#HW CQ BLTH03123454
+ENTRY "Data"="vcoloPuCtrlBLE_test"
+{
+    #UINT32 vcoloPuCtrlBLE_test   = 0xc808;
+    "Address"=0x00201110 # <<< $AUTOGEN(ADDR{vcoloPuCtrlBLE_test})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           09 C8 00 00 # 0x0000c808
+        } END_COMMENTED_BYTES
+}
+
+#HW CQ BLTH03123454
+ENTRY "Data"="vcoloPuCtrlBLE"
+{
+    #UINT32 vcoloPuCtrlBLE        = 0xc808;
+    "Address"=0x00201140 # <<< $AUTOGEN(ADDR{vcoloPuCtrlBLE})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           08 C8 00 00 # 0x0000c808
+        } END_COMMENTED_BYTES
+}
+
+#HW CQ BLTH03123454
+ENTRY "Data"="dsadcPuCtrlBLE_test"
+{
+    #UINT32 dsadcPuCtrlBLE_test   = 0xc808;
+    "Address"=0x00201118 # <<< $AUTOGEN(ADDR{dsadcPuCtrlBLE_test})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           08 C7 00 00 # 0x0000c808
+        } END_COMMENTED_BYTES
+}
+
+#HW CQ BLTH03123454
+ENTRY "Data"="dsadcPuCtrlBLE"
+{
+    ##UINT32 dsadcPuCtrlBLE        = 0xc808;;
+    "Address"=0x00201148 # <<< $AUTOGEN(ADDR{dsadcPuCtrlBLE})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           07 C7 00 00 # 0x0000c808
+        } END_COMMENTED_BYTES
+}
+
+
+#HW CQ BLTH03123454
+ENTRY "Data"="pwrRampCtrlBLE_test"
+{
+    #UINT32 pwrRampCtrlBLE_test   = 0x8314;
+    "Address"=0x00201124 # <<< $AUTOGEN(ADDR{pwrRampCtrlBLE_test})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           14 81 00 00 # 0x8114
+        } END_COMMENTED_BYTES
+}
+
+#HW CQ BLTH03123454
+ENTRY "Data"="pwrRampCtrlBLE"
+{
+    #UINT32 pwrRampCtrlBLE        = 0x8314;
+    "Address"=0x00201154 # <<< $AUTOGEN(ADDR{pwrRampCtrlBLE})
+    "Data"=
+        COMMENTED_BYTES
+        {
+           <hex>
+           14 81 00 00 # 0x8114
+        } END_COMMENTED_BYTES
+}
+
+
+
+# vvv $AUTOGEN(INCLUDE_FROM_TIER2{patch/InitHooks/config_items.agi})
+
+
+######################################################################
+#                          TCA ENTRIES
+######################################################################
+# vvv $AUTOGEN(INCLUDE{tca_tbl.agi})
+###############################################################################
+# 2073x TCA Control
+###############################################################################
+ENTRY "Temperature Correction Algorithm"
+{
+   "Enable" = 1
+}
+
+###############################################################################
+# 2073x TCA Table Values
+###############################################################################
+ENTRY "TCA Conversion Values with Page Descriptors"
+{
+    "FAB ID"                = 0xFF
+
+    # Switching points
+    # Note: Numbers include a +50 offset
+
+    "Num TSteps"            = 4
+
+    "Tmin[0]"               = 20  # -30 degree-C
+    "Tmin[1]"               = 30  # -20 degree-C
+    "Tmin[2]"               = 50  #   0 degree-C
+    "Tmin[3]"               = 90  #  40 degree-C
+
+
+   # Number of 8-bit pages
+   # 1-5
+    "Num Pages8"            = 0
+
+    # Number of 16-bit pages
+    # 1
+    "Num Pages16"           = 1
+
+
+    #####################################
+    # PAGE DESCRIPTORS
+    #
+    # Legend:
+    # Single array index = [page]
+    # Dual array index = [page][reg]
+    #####################################
+
+    # 8-bit page descriptors (template)
+
+    # 16-bit page descriptor
+
+       # Page 0
+       "BaseAddress16[0]"      = 0x00310000
+           "NumRegs16[0]"      = 1
+
+       #
+       "AdrOffset16[0][0]"     = 0xFF58
+         "Bitmask16[0][0]"     = 0x007F
+
+
+    #####################################
+    # PAGE DATA
+    #
+    # Legend:
+    # Triple Array indices: [TStep][Page][Reg]
+    #####################################
+
+    #-----------
+    # 8-bit data
+    #-----------
+
+    # TStep 0
+       # Page 0
+       # Page 1
+       # Page 2
+       # Page 3
+       # Page 4
+
+    # TStep 1
+       # Page 0
+       # Page 1
+       # Page 2
+       # Page 3
+       # Page 4
+
+    # TStep 2
+       # Page 0
+       # Page 1
+       # Page 2
+       # Page 3
+       # Page 4
+
+    # TStep 3
+       # Page 0
+       # Page 1
+       # Page 2
+       # Page 3
+       # Page 4
+
+    # TStep 4
+       # Page 0
+       # Page 1
+       # Page 2
+       # Page 3
+       # Page 4
+
+    # TStep 5
+       # Page 0
+       # Page 1
+       # Page 2
+       # Page 3
+       # Page 4
+
+    #------------
+    # 16-bit data
+    #------------
+
+    # TStep 0
+          # Page 0
+            "Data16[0][0][0]"     = 0x1e0
+          "Offset16[0][0][0]"     = 0x00
+
+
+          # The rest of Page 0 is spare
+
+          # Only 1 page supported for 16-bit data
+
+       # TStep 1
+          # Page 0
+            "Data16[1][0][0]"     = 0x1e2
+          "Offset16[1][0][0]"     = 0x00
+
+
+          # The rest of Page 0 is spare
+
+          # Only 1 page supported for 16-bit data
+
+       # TStep 2
+          # Page 0
+            "Data16[2][0][0]"     = 0x1e4
+          "Offset16[2][0][0]"     = 0x00
+
+
+          # The rest of Page 0 is spare
+
+          # Only 1 page supported for 16-bit data
+
+       # TStep 3
+          # Page 0
+            "Data16[3][0][0]"     = 0x1e6
+       "Offset16[3][0][0]"     = 0x00
+       # The rest of Page 0 is spare
+
+       # Only 1 page supported for 16-bit data
+
+    # TStep 4
+       # Page 0
+
+       # The rest of Page 0 is spare
+
+       # Only 1 page supported for 16-bit data
+
+    # TStep 5
+       # Page 0
+
+       # The rest of Page 0 is spare
+
+       # Only 1 page supported for 16-bit data
+}
+
+# ^^^ $AUTOGEN(INCLUDE{tca_tbl.agi})
+
+######################################################################
+#                     R/RC CALIBRATION ENTRIES
+######################################################################
+# vvv $AUTOGEN(INCLUDE{rrccal_tbl.agi})
+
+
+
+
+
+# ^^^ $AUTOGEN(INCLUDE{rrccal_tbl.agi})
+
+
+
+
+
+
+# ^^^ $AUTOGEN(INCLUDE_FROM{patch/InitHooks/config_items.agi})
+
+##############################################################################
+# Need to include glue code autogenerated by gen_agi.pl before including code patches
+##############################################################################
+# vvv $AUTOGEN(INCLUDE{bld/agiauto.agi})
+# vvv $AUTOGEN(INCLUDE{sections.agi})
+
+# TIER2: RO_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf
+ENTRY "Data" = "RO_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf"
+{
+  "Address" = 0x00204568
+  "Data" =
+   COMMENTED_BYTES
+     {
+        <hex>
+            25 f6 48 fb 01 d0 3d f6 97 ba 3d f6 e5 ba 00 00
+			04 4b 1b 88 4f ea 13 23 01 22 03 20 0d f6 b0 fa
+			11 f6 4b b9 5a 57 20 00 00 f0 e0 f9 0d f6 48 f8
+			00 f0 b5 fa 00 f0 ee fa 00 28 01 d0 0d f6 94 bd
+			0d f6 d9 bd 80 f8 6e 60 28 46 00 f0 a8 fa 00 f0
+			e1 fa 00 28 01 d0 0d f6 ec bd 0d f6 1a be bd e8
+			10 40 00 f0 0c bb e0 1c 02 49 01 f0 9d f8 0c f6
+			24 bd 00 00 34 57 20 00 01 d0 05 29 01 d1 0c f6
+			a0 be 00 f0 56 fb 0c f6 ae be 00 f0 5e fb 08 bd
+			10 b5 00 f0 96 fb 04 46 0a f6 64 be 0b f6 39 fc
+			00 f0 9d fb 0a f6 cc be 10 b5 00 f0 d9 fb 10 bd
+			00 f0 13 bc 44 f6 b2 f8 00 f0 55 fc 0c f6 0a bb
+			c0 1c 11 f6 59 fb 0c f6 dd ba 00 00 04 d1 08 69
+			00 07 06 d0 28 f6 1e ba 02 28 01 d1 00 f0 0b fe
+			10 bd 28 f6 1a ba 00 00 bd e8 10 40 00 f0 5a be
+			40 f2 31 11 ad f8 02 10 3f f6 71 b9 40 f2 31 10
+			60 81 39 f6 ff b9 00 00 38 46 00 f0 79 ff 2c f6
+			23 b8 08 29 03 d0 22 29 01 d0 3d f6 ea fa 3d f6
+			43 bc 00 00 bd e8 30 40 01 f0 30 b8 10 b5 5f 48
+			00 78 17 28 02 d0 5e 49 07 20 08 76 00 f0 f5 fc
+			10 bd 70 b5 5b 4a 01 29 94 68 7e d1 01 28 fc d1
+			59 48 d0 f8 58 1f 59 4a 11 60 d0 f8 58 3f 58 4a
+			13 60 58 4a 15 68 6f f3 11 05 15 60 15 68 56 4e
+			36 68 45 ea 06 05 15 60 54 4a 12 68 c0 f8 64 2c
+			53 4a 12 68 c0 f8 d8 2c 25 7c 4f f4 c0 04 17 2d
+			2e d1 50 4a 00 f6 c8 40 12 68 42 60 4e 4a 12 68
+			42 61 4e 4a 12 68 82 60 4d 4a 12 68 82 61 4d 4a
+			12 68 02 60 4c 4a 12 68 02 61 4c 4a 12 68 c0 f8
+			30 23 4b 4a 12 68 c2 60 4a 4a 12 68 c0 f8 2c 23
+			c0 f8 90 12 48 49 09 68 e1 60 48 49 09 68 c4 f8
+			7c 11 47 f2 55 51 c4 f8 18 12 48 f6 2f 01 2b e0
+			43 49 00 f6 c8 40 09 68 41 60 42 49 09 68 41 61
+			41 49 09 68 81 60 41 49 09 68 81 61 40 49 09 68
+			01 60 02 61 3f 49 09 68 c0 f8 30 13 3e 49 09 68
+			c1 60 3e 49 09 68 c0 f8 2c 13 c0 f8 90 32 3c 49
+			09 68 e1 60 3b 49 09 68 c4 f8 7c 11 49 f2 55 51
+			c4 f8 18 12 48 f6 33 01 00 e0 2c e0 01 61 36 49
+			a0 f6 c8 40 09 68 c0 f8 f8 1d 34 49 09 68 c0 f8
+			e8 1c 33 49 09 68 c0 f8 e0 1f 32 49 09 68 c0 f8
+			30 1c 31 49 09 68 c0 f8 2c 1c 30 49 09 68 c0 f8
+			dc 1e 2f 49 09 68 c0 f8 e4 1e 2e 48 00 68 c4 f8
+			14 02 2d 48 00 68 e0 66 2c 48 00 68 c4 f8 f4 03
+			4f f0 01 00 70 bd 00 20 70 bd 00 00 35 0b 20 00
+			40 31 20 00 2c 22 20 00 00 f0 31 00 30 11 20 00
+			60 11 20 00 38 8a 31 00 9c 11 20 00 08 11 20 00
+			50 11 20 00 0c 11 20 00 10 11 20 00 14 11 20 00
+			18 11 20 00 1c 11 20 00 20 11 20 00 24 11 20 00
+			28 11 20 00 2c 11 20 00 34 11 20 00 38 11 20 00
+			3c 11 20 00 40 11 20 00 44 11 20 00 48 11 20 00
+			4c 11 20 00 54 11 20 00 58 11 20 00 5c 11 20 00
+			64 11 20 00 68 11 20 00 6c 11 20 00 70 11 20 00
+			74 11 20 00 78 11 20 00 7c 11 20 00 80 11 20 00
+			84 11 20 00 88 11 20 00 90 11 20 00 94 11 20 00
+			18 b5 25 4b 42 1a c3 f8 00 d0 00 9b 12 1f 23 f4
+			78 43 03 f5 70 43 23 f0 40 43 43 f0 80 53 03 f1
+			00 43 00 93 88 42 02 d8 43 f4 80 60 01 e0 23 f4
+			80 60 c0 f3 80 21 c1 f1 01 01 61 f3 db 60 c0 f3
+			c0 61 61 f3 5d 70 c2 f3 09 31 61 f3 09 00 c2 f3
+			4a 01 61 f3 1a 40 00 90 18 bd 38 b5 02 46 21 f0
+			01 00 22 f0 01 05 29 46 ff f7 ca ff 0a 4c 00 90
+			69 46 28 46 62 68 27 f6 4f ff 60 68 40 1c 60 60
+			38 bd 13 b5 04 4c 01 a9 62 68 27 f6 45 ff 60 68
+			40 1c 60 60 1c bd 00 00 28 57 20 00 2d e9 f0 41
+			0d 46 04 46 16 46 1f 46 08 21 28 46 43 f6 35 ff
+			3b 46 32 46 29 46 20 46 bd e8 f0 41 0a f6 2c bc
+			38 b5 05 46 26 a1 04 20 09 f6 5e ff ff 20 28 70
+			69 46 04 20 26 f6 3e f9 69 46 02 20 09 f6 54 ff
+			00 24 08 e0 28 5d 69 46 26 f6 34 f9 69 46 02 20
+			09 f6 4a ff 64 1c 68 78 80 1c a0 42 f2 d8 38 bd
+			70 b5 05 46 18 48 00 68 00 28 1d d0 17 4c 00 20
+			e0 70 f7 20 a0 70 92 20 20 71 01 20 60 71 e2 1d
+			f0 21 50 1c 26 f6 51 fb 06 46 a0 71 06 21 01 eb
+			c0 00 60 70 4d b1 01 2d 01 d0 02 2d 03 d1 29 46
+			20 46 25 f6 a7 f8 30 46 70 bd 20 46 ff f7 b8 ff
+			f9 e7 af f2 53 00 06 49 c1 f8 2c 01 70 47 00 00
+			40 24 2a 23 00 00 00 00 4c 2d 20 00 cc 3e 20 00
+			b0 2b 20 00 70 b5 04 46 0d 46 10 46 0f f6 35 f8
+			05 f0 00 41 04 f0 02 02 11 43 16 d1 14 f0 2c 0f
+			13 d0 2c 40 04 40 14 f0 0c 0f 0e d1 a1 06 0c d5
+			40 06 0a d5 0b f6 98 fa 05 f0 40 01 08 43 02 d0
+			4f f0 00 40 70 bd 02 48 70 bd 00 20 70 bd 00 00
+			05 00 00 80 10 b5 1b f6 29 fb 08 b1 1a f6 af fc
+			00 21 bd e8 10 40 4f f4 96 62 05 20 12 f6 d4 b9
+			8e 48 00 68 90 f8 70 00 70 47 10 29 00 d9 10 21
+			0a 46 01 46 8a 48 43 f6 69 be 10 29 00 d9 10 21
+			0a 46 01 46 87 48 43 f6 61 be 87 48 00 68 00 f0
+			20 00 70 47 84 48 01 68 21 f0 20 01 01 60 70 47
+			81 48 01 68 41 f0 20 01 01 60 70 47 7e 48 00 68
+			00 f0 40 00 70 47 7c 48 01 68 21 f0 40 01 01 60
+			70 47 79 48 01 68 41 f0 40 01 01 60 70 47 70 b5
+			72 48 04 68 25 78 35 b9 72 48 06 22 04 f1 0a 01
+			08 38 43 f6 33 fe 60 7c 20 b1 e0 7a 10 b1 05 20
+			a0 70 1e e0 20 7b 40 07 05 d4 a0 7c 40 07 02 d4
+			01 20 a0 70 0e e0 20 7c a1 7a 04 28 07 dc 04 29
+			05 dc 66 4a 00 eb 80 00 10 44 40 5c a0 70 a0 78
+			01 28 04 d1 a0 7c 20 f0 04 00 a0 74 04 e0 05 28
+			02 d1 10 21 5a 48 01 e0 5a 48 10 21 bd e8 70 40
+			0c f6 73 bf 70 b5 01 24 00 f0 95 f9 20 b1 06 20
+			0c f6 e3 f9 00 20 70 bd 50 4d 28 68 80 78 05 28
+			11 d3 ff f7 a3 ff 12 e0 00 24 03 20 0c f6 d5 f9
+			29 68 00 20 81 f8 70 00 4d 48 01 68 09 b1 04 20
+			88 47 20 46 70 bd 01 28 04 d9 ff f7 7e ff 00 28
+			f7 d0 e9 e7 0d f6 27 fa f9 e7 10 b5 04 46 45 a0
+			0c f6 7e f9 60 1c 0c f6 78 f8 00 20 10 bd 10 b5
+			04 46 44 a0 0c f6 74 f9 b4 f8 01 10 e0 1c 0c f6
+			a3 f8 01 20 0d f6 14 f9 00 20 10 bd 1c b5 01 20
+			8d f8 00 00 31 48 06 22 01 68 0d f1 01 00 0a 31
+			0c 46 43 f6 b3 fd 2f 48 06 22 21 46 08 38 43 f6
+			ad fd 07 21 68 46 0c f6 84 f9 1c bd 27 48 00 68
+			81 78 5a 30 06 29 09 d2 df e8 01 f0 08 06 06 06
+			03 06 2f a0 0c f6 44 b9 0c f6 19 b9 70 47 10 b5
+			1e 4c 20 68 90 f8 70 10 04 29 14 d1 01 78 91 b9
+			81 78 03 29 0d d1 00 f1 71 01 10 22 5a 30 43 f6
+			85 fd 20 68 06 21 80 f8 70 10 00 21 5a 30 0c f6
+			ce fa 01 20 10 bd 00 20 10 bd 12 49 0c 39 08 60
+			70 47 0e 48 00 68 80 78 03 28 05 d1 0d 48 0c 38
+			00 68 00 28 00 d0 00 47 70 47 08 b5 05 21 8d f8
+			00 10 8d f8 01 00 02 21 68 46 0c f6 3a f9 08 48
+			01 68 00 29 01 d0 00 20 88 47 08 bd ac 06 20 00
+			80 57 20 00 3c 57 20 00 b0 06 20 00 40 a3 04 00
+			b4 06 20 00 45 6e 63 20 69 6e 66 6f 3a 20 4c 54
+			4b 00 00 00 6d 61 73 74 65 72 20 69 64 00 00 00
+			70 61 69 72 69 6e 67 20 6d 65 74 68 6f 64 2c 20
+			42 6f 74 68 20 49 6e 70 75 74 00 00 2d 49 88 60
+			70 47 10 b5 04 46 c0 78 3c 28 03 d1 29 48 80 68
+			00 b1 80 47 20 46 10 bd 26 49 48 60 70 47 25 48
+			40 68 00 28 00 d0 00 47 70 47 23 48 70 47 10 b5
+			01 46 06 22 20 48 43 f6 11 fd 06 22 1e 49 1f 48
+			43 f6 0c fd 1e 49 01 20 08 70 10 bd 19 49 02 46
+			08 68 0a 60 70 47 70 b5 04 46 09 f6 1d ff 05 46
+			20 78 0f 28 15 d1 17 49 00 20 08 70 a0 88 a0 f5
+			80 61 06 39 0d d1 a0 78 58 b1 09 f6 87 fe 18 b1
+			11 48 00 88 09 f6 d1 fe 12 20 0b f6 07 f9 0a f6
+			2f fa 08 48 01 68 09 b1 20 46 88 47 28 46 70 bd
+			0a 48 00 78 00 28 03 d0 af f2 55 00 08 60 02 20
+			70 47 00 00 4c 57 20 00 78 06 20 00 bc 0d 20 00
+			39 06 20 00 3b 06 20 00 42 06 20 00 3d 06 20 00
+			30 b5 dd e9 03 45 88 42 15 d8 02 28 13 d3 4f f4
+			48 60 81 42 0f d8 b2 f5 fa 7f 0c d2 52 1c 51 43
+			b1 eb 83 0f 07 da 0a 2b 05 d3 83 42 03 d8 ac 42
+			01 d8 01 20 30 bd 00 20 30 bd 08 48 00 78 17 28
+			01 d1 06 20 70 47 07 20 70 47 04 48 00 78 17 28
+			01 d1 06 20 70 47 07 20 70 47 00 00 35 0b 20 00
+			10 b5 0a 4c 20 78 00 28 0e d1 09 48 fb f5 8a fe
+			08 48 09 49 00 68 c8 60 08 48 fb f5 8a fe 08 48
+			fb f5 83 fe 01 20 20 70 10 bd 00 00 58 57 20 00
+			93 12 00 00 20 04 20 00 8c 17 20 00 21 12 00 00
+			ed 11 00 00 01 48 00 78 70 47 00 00 59 57 20 00
+			12 49 08 70 70 47 12 48 12 49 00 68 09 78 02 78
+			01 2a 01 d1 40 7b 00 e0 c0 7c 88 42 01 d2 06 20
+			70 47 00 20 70 47 0a 48 00 68 01 78 00 f1 e9 02
+			01 29 01 d1 40 7b 00 e0 c0 7c 10 28 04 d2 c0 f1
+			10 01 10 44 43 f6 71 bc 70 47 00 00 a4 06 20 00
+			ac 06 20 00 5a 57 20 00 2d e9 f0 47 2b 48 4f f4
+			48 15 04 68 28 69 00 27 00 f0 0f 00 02 28 02 d0
+			00 20 28 64 68 64 df f8 98 80 df f8 98 90 d8 f8
+			00 00 38 b9 d9 f8 00 00 a0 42 03 d1 22 48 00 68
+			c0 03 35 d4 21 48 22 49 00 68 09 78 21 4e 08 43
+			11 d0 28 69 00 f0 0f 00 02 28 02 d0 02 20 25 f6
+			66 fe e8 68 64 21 40 1c 48 43 1b 49 b1 fb f0 f0
+			41 1c 31 60 14 e0 27 f6 5d fd 18 48 18 49 00 68
+			09 68 48 43 17 49 09 88 00 fb 01 f2 16 49 00 eb
+			80 10 09 68 40 00 b2 fb f1 f2 b0 fb f1 f0 32 60
+			c5 f8 9c 00 30 68 68 62 c8 f8 00 70 c9 f8 00 40
+			bd e8 f0 87 06 49 08 70 70 47 00 00 08 0e 20 00
+			d0 0c 20 00 d4 0c 20 00 b0 0c 20 00 10 0e 20 00
+			5c 57 20 00 fc 10 20 00 c0 c2 04 00 f8 10 20 00
+			e0 10 20 00 8c 0c 20 00 ec 10 20 00 7f b5 4f f4
+			48 12 d2 f8 c0 00 c0 07 4e d0 a0 48 91 6a 00 68
+			09 07 4f f0 00 05 03 d5 00 20 22 f6 a1 fb 3a e0
+			11 6a 81 42 03 d1 00 20 25 f6 7d fc 33 e0 98 49
+			09 68 08 1a 11 69 01 f0 0f 01 02 29 0e d1 d1 68
+			64 22 49 1c 51 43 a1 fb 00 02 01 fb 05 21 00 23
+			4f f4 16 62 43 f6 54 fb 04 46 16 e0 8d 49 8f 4c
+			09 68 24 68 a1 fb 00 02 01 fb 05 21 8a 4a 2b 46
+			12 68 62 43 43 f6 44 fb 04 00 06 d0 02 a9 20 46
+			25 f6 5d fb 02 a8 25 f6 08 fc 20 46 22 f6 68 fb
+			20 46 3a f6 e1 ff 4f f4 f0 40 cd e9 00 05 01 46
+			7f 48 01 60 01 99 41 60 7f bd 10 b5 7d 48 28 f6
+			79 f9 7e 49 7c 48 48 61 7d 49 4f f4 fa 70 08 80
+			10 bd 7c 48 00 78 08 b1 01 20 70 47 03 20 70 47
+			10 b5 78 48 00 78 00 28 0f d1 3a f6 cd ff 00 28
+			0b d0 75 48 00 68 40 07 03 d5 bd e8 10 40 28 f6
+			ab ba bd e8 10 40 25 f6 ff bd 10 bd 2d e9 f0 41
+			05 46 00 24 fb f5 5a fa 80 46 fb f5 5a fa 4f f4
+			48 10 01 69 01 f0 0f 01 02 29 21 d0 65 4b 67 4e
+			67 49 45 b9 1a 78 5a bb 66 4f 32 68 3f 78 3a 44
+			0f 68 ba 42 24 d2 64 4a 14 68 01 2c 09 d1 63 4c
+			63 4f 24 68 3f 68 3c 44 0f 68 bc 42 08 d8 02 24
+			14 60 09 68 01 22 31 60 1a 70 00 21 c1 61 04 e0
+			40 46 bd e8 f0 41 fb f5 2f ba c1 69 01 29 fc d1
+			49 49 09 68 41 61 c2 61 01 24 81 69 00 29 fc d1
+			40 46 fb f5 21 fa 00 2d 07 d1 00 2c 05 d0 bd e8
+			f0 41 40 f2 dc 50 25 f6 98 bc bd e8 f0 81 2d e9
+			f0 47 fb f5 0b fa 81 46 fb f5 0b fa 4f f4 48 1c
+			dc f8 10 00 3f 4b 00 f0 0f 00 00 22 02 28 01 d1
+			1a 70 53 e0 18 78 00 28 50 d0 dc f8 18 00 01 28
+			05 d1 dc f8 18 00 01 28 01 d1 1a 70 43 e0 dc f8
+			18 00 01 28 42 d9 dc f8 10 00 00 f0 0f 00 02 28
+			3c d0 35 4c 2b 4f 20 68 df f8 c8 80 3f 1f 02 28
+			05 d1 3a 70 03 20 20 60 01 20 88 f8 00 00 dc f8
+			18 10 30 4e 38 78 46 f8 20 10 40 1c c0 b2 0a 21
+			b0 fb f1 f5 01 fb 15 00 38 70 cc f8 1c 20 1a 70
+			20 68 03 28 06 d1 38 78 a8 b9 28 20 22 60 88 f8
+			00 00 00 e0 78 b9 13 4b 00 20 1a 60 56 f8 20 20
+			1c 68 40 1c 22 44 1a 60 0a 28 f7 db 50 1d b0 fb
+			f1 f0 18 60 02 e0 01 20 3a f6 50 ff 48 46 bd e8
+			f0 47 fb f5 a9 b9 4f f4 48 10 00 69 00 f0 0f 00
+			02 28 02 d0 02 20 25 f6 da bc 70 47 dc 0c 20 00
+			e4 0c 20 00 ec 10 20 00 e0 10 20 00 f8 10 20 00
+			00 e1 00 e0 64 57 20 00 e5 4f 20 00 a8 22 20 00
+			b0 0c 20 00 dd 10 20 00 bc 0c 20 00 e4 10 20 00
+			c4 10 20 00 dc 10 20 00 e8 10 20 00 f0 10 20 00
+			f4 10 20 00 90 57 20 00 70 b5 0c 46 1d 46 00 23
+			0e 49 10 e0 82 42 0d d1 b1 f8 05 20 20 46 a2 42
+			00 d8 10 46 82 b2 d1 f8 01 10 28 46 1d f6 ac f9
+			2b 19 03 e0 c9 1d 0a 78 fe 2a eb d1 18 46 70 bd
+			af f2 3b 00 02 49 08 60 70 47 00 00 18 57 20 00
+			18 0a 20 00 10 b5 07 49 02 1d 0b 68 33 b1 00 88
+			b2 f8 01 10 c0 1e d2 1c 98 47 01 e0 0e f6 d7 fa
+			00 20 10 bd f4 06 20 00 2d e9 fc 47 80 46 00 25
+			28 46 25 f6 e8 fa 48 48 00 78 00 28 7d d0 df f8
+			1c 91 01 27 b8 f1 00 0f 3e d0 99 f8 3e 10 48 46
+			49 b1 40 f2 71 22 b8 fb f2 f1 82 8e 4a 43 4f f4
+			c8 61 b2 fb f1 f6 3e 49 81 46 8a 46 0c 68 18 e0
+			e1 7a 20 1f 01 29 13 d1 82 7b 07 fa 02 f1 0d 43
+			99 f8 3e 10 61 b1 01 68 8a 6a 00 21 90 47 38 b1
+			90 f8 20 10 21 b1 41 8b 31 44 41 83 20 f6 d4 fb
+			24 68 54 45 e4 d1 7d b1 69 46 40 46 25 f6 b7 f9
+			01 24 07 fa 04 f0 28 42 03 d0 69 46 20 46 25 f6
+			8b fa 64 1c 03 2c f4 d3 21 f6 73 f9 d9 f8 1c 00
+			4d 46 4f f4 46 14 98 b1 41 7d 02 29 10 d1 d4 f8
+			b4 15 80 7b c1 f3 01 16 6a 46 31 46 25 f6 ed f9
+			00 98 69 46 00 f0 03 00 00 90 30 46 25 f6 6c fa
+			00 20 e8 61 e8 60 17 48 01 68 81 42 01 d0 21 f6
+			f2 f8 20 f6 7e fe 14 49 08 68 88 42 02 d0 00 1f
+			20 f6 12 fe 11 48 01 68 81 42 03 d0 20 f6 f7 fa
+			20 f6 ac fa 38 20 e0 60 00 e0 0b e0 95 f8 3b 00
+			01 28 07 d1 0a 48 03 88 0a 48 02 78 02 20 11 46
+			20 f6 50 f8 bd e8 fc 87 ed 0e 20 00 2c 22 20 00
+			14 0b 20 00 1c 0b 20 00 2c 0b 20 00 24 0b 20 00
+			00 0b 20 00 f1 0a 20 00 2d e9 f0 47 05 46 69 68
+			40 88 01 f1 10 06 91 f8 0c 80 91 f8 10 90 2a f6
+			2b fc 01 27 04 46 b8 f1 1a 0f 59 d8 00 2c 57 d0
+			20 46 69 68 00 f0 74 f8 00 28 51 d0 00 27 b9 f1
+			0c 0f 51 d1 70 78 84 f8 ad 00 70 88 a4 f8 ae 00
+			b0 88 a4 f8 b0 00 20 8e 40 f4 80 70 20 86 80 b2
+			80 05 07 d5 00 21 20 46 3c f6 df fb 20 8e 20 f4
+			00 70 20 86 20 8e 41 06 0f d4 00 05 2f d4 20 46
+			3e f6 14 fa 94 f8 c2 00 3e f6 f6 fe 38 b3 94 f8
+			c2 00 20 21 3e f6 e5 fe 21 e0 01 05 10 d4 e1 8e
+			c9 06 0d d5 20 f0 40 00 20 86 20 46 3e f6 fe f9
+			e0 8e 20 f0 10 00 e0 86 20 46 2b f6 38 f8 0e e0
+			94 f8 c2 00 3e f6 be fe a0 8e 20 f0 10 00 a0 86
+			20 46 2b f6 2c f8 20 8e 20 f0 40 00 20 86 01 27
+			00 21 68 68 3e f6 5b f9 38 46 bd e8 f0 87 00 00
+			10 b5 2a f6 c1 fb 04 46 06 22 08 49 40 30 43 f6
+			05 f9 06 49 20 39 91 f8 26 20 84 f8 46 20 48 6c
+			bd e8 10 40 3c 21 3c f6 db ba 00 00 00 34 20 00
+			70 b5 04 46 01 20 00 25 94 f8 ac 20 2b 46 52 b1
+			0f 2a 08 d0 01 2a 06 d0 0e 2a 04 d0 10 2a 02 d0
+			07 2a 00 d0 01 23 a2 8e 52 07 19 d5 94 f8 c1 20
+			01 2a 01 d0 00 2b 13 d0 09 7c 89 1e 0c 29 07 d2
+			df e8 01 f0 0e 0e 0e 0e 0e 06 06 06 0e 0e 06 0e
+			3d 22 11 46 20 46 3e f6 29 fb 84 f8 ac 50 00 20
+			70 bd 70 b5 05 46 00 f1 08 04 08 21 a0 1d 43 f6
+			e4 f8 a0 7a 40 f0 40 00 a0 72 08 20 e8 70 70 bd
+			70 b5 05 46 0e 46 00 f1 08 04 08 21 10 30 43 f6
+			d4 f8 f0 78 01 28 02 d9 12 20 28 70 08 e0 18 b9
+			20 7b 40 f0 40 00 20 73 f0 78 a0 71 02 20 e0 71
+			0a 20 e8 70 70 bd 10 b5 02 46 b0 f8 01 00 c0 f3
+			09 03 00 f4 7c 40 04 0a 00 20 10 2c 07 d1 03 2b
+			06 d0 04 2b 03 d1 10 46 ff f7 d2 ff 01 20 10 bd
+			10 46 ff f7 be ff f9 e7 70 b5 04 46 85 6c 15 48
+			6a 7c 90 f8 29 10 14 48 52 09 30 f8 11 10 30 f8
+			12 00 08 44 11 49 09 78 41 1a 11 48 00 78 17 28
+			02 d1 10 48 00 68 01 44 20 46 22 f6 da fa e8 78
+			40 f2 71 21 48 43 0c 49 09 78 01 eb 40 00 60 62
+			a0 7b 24 f6 69 ff 40 08 a0 62 00 20 84 f8 43 00
+			70 bd 00 00 3c 0e 20 00 48 df 04 00 e0 0a 20 00
+			35 0b 20 00 7c 57 20 00 e8 0d 20 00 70 b5 0c 46
+			05 46 01 46 03 48 3e f6 c8 fd 02 48 64 1c 28 44
+			84 70 70 bd 70 41 20 00 01 b5 43 f6 37 f8 01 bd
+			bd 5a 57 20 00 02 00 fe 00 00 00 00 00 00 00 00
+
+     } END_COMMENTED_BYTES
+}
+# TIER2: end of RO_AREA
+
+# TIER2: RW_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf
+ENTRY "Data" = "RW_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf"
+{
+  "Address" = 0x00205728
+  "Data" =
+   COMMENTED_BYTES
+     {
+        <hex>
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+			00 00 00 00 d2 04 00 00 00 00 00 00 00 00 00 00
+			00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+			00 00 07 10 00 00 00 00 00 00 00 00 00 00 00 00
+			ab 50 20 00 00 00 00 00 00 00 00 00 00 00 00 00
+			00 00 00 00 d0 07 00 00
+
+     } END_COMMENTED_BYTES
+}
+# TIER2: end of RW_AREA
+
+# TIER2: CONFIG_AREA from : empty section
+
+# TIER2: ID_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf
+ENTRY "Data" = "ID_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf"
+{
+  "Address" = 0x002057b8
+  "Data" =
+   COMMENTED_BYTES
+     {
+        <hex>
+            6c 1d 39 01
+
+     } END_COMMENTED_BYTES
+}
+# TIER2: end of ID_AREA
+
+# TIER2: INIT_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf
+ENTRY "Data" = "INIT_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf"
+{
+  "Address" = 0x002057c0
+  "Data" =
+   COMMENTED_BYTES
+     {
+        <hex>
+            70 b5 33 48 33 49 43 f6 04 f8 00 f0 49 f9 32 49
+			01 20 08 70 31 48 00 26 06 70 40 f6 01 70 4f f4
+			c0 04 c4 f8 14 02 2e 49 48 f6 2f 00 08 60 2d 49
+			08 60 2d 49 48 f2 14 20 08 60 2c 49 08 60 2c 49
+			40 f6 78 40 08 60 2b 49 4c f6 08 10 08 60 2a 49
+			49 f2 55 50 08 60 4f f4 48 10 c1 6f 21 f4 00 31
+			c1 67 4f f4 64 15 28 6c c0 07 0e d0 00 20 25 f6
+			fa f9 54 f8 e0 0f 20 f0 80 00 20 60 28 6c 20 f0
+			03 00 28 64 32 20 25 f6 34 f9 1c 48 06 70 ff f7
+			dc f8 00 f0 d7 f9 1b 49 19 48 08 60 1b 49 1a 48
+			08 60 1c 49 1a 48 08 60 1b 48 02 24 04 60 ff f7
+			43 fd 1b 48 19 49 c0 f8 64 11 1a 49 c1 62 1a 49
+			c0 f8 40 11 1a 49 19 48 08 60 1a 48 04 70 70 bd
+			80 57 20 00 38 00 00 00 5c 45 20 00 f8 15 20 00
+			20 11 20 00 50 11 20 00 24 11 20 00 54 11 20 00
+			94 11 20 00 44 11 20 00 8c 11 20 00 0c 0c 20 00
+			95 46 20 00 38 45 20 00 bc 57 20 00 5c 0c 20 00
+			2d 4a 20 00 0c 07 20 00 e8 10 20 00 ab 46 20 00
+			b0 2b 20 00 01 4f 20 00 81 54 20 00 4f 56 20 00
+			bc 0b 20 00 f4 0d 20 00 03 48 02 49 80 30 ff f7
+			08 b8 00 00 69 45 20 00 1d 1a 04 00 03 48 02 49
+			8a 30 fe f7 fe bf 00 00 79 45 20 00 93 57 01 00
+			03 48 02 49 00 f2 5e 20 fe f7 f3 bf 91 45 20 00
+			c7 13 01 00 03 48 02 49 4a 30 fe f7 ea bf 00 00
+			7d 4a 20 00 e3 e4 00 00 16 48 15 49 5c 30 fe f7
+			e0 bf 16 48 14 49 2e 30 fe f7 db bf 14 49 15 48
+			fe f7 d7 bf 15 48 14 49 80 1c fe f7 d2 bf 14 49
+			14 48 fe f7 ce bf 15 48 13 49 32 30 fe f7 c9 bf
+			14 48 13 49 80 1c fe f7 c4 bf 14 48 12 49 28 30
+			fe f7 bf bf 13 48 12 49 80 1c fe f7 ba bf 00 00
+			99 45 20 00 71 20 01 00 ad 45 20 00 63 21 01 00
+			d3 4b 20 00 a9 22 01 00 c7 45 20 00 c3 22 01 00
+			05 4c 20 00 79 1c 01 00 cf 45 20 00 eb 0f 01 00
+			35 4c 20 00 e7 0e 01 00 e1 45 20 00 fd 12 01 00
+			f3 45 20 00 53 0f 01 00 06 49 07 48 fe f7 91 bf
+			07 48 06 49 28 30 fe f7 8c bf 07 48 05 49 80 1c
+			fe f7 87 bf f9 45 20 00 c9 f2 00 00 05 46 20 00
+			7d f3 00 00 11 46 20 00 c3 ec 00 00 06 49 07 48
+			fe f7 77 bf 06 49 07 48 fe f7 73 bf 07 48 06 49
+			80 1c fe f7 6e bf 00 00 f9 4d 20 00 a5 10 04 00
+			33 4e 20 00 11 82 02 00 19 46 20 00 33 82 02 00
+			01 49 02 48 fe f7 5d bf 59 4e 20 00 c5 12 00 00
+			10 b5 00 f0 10 f8 27 49 08 70 c0 b2 01 28 09 d1
+			25 48 00 68 01 21 b1 eb 10 6f 03 d0 bd e8 10 40
+			29 f6 60 b9 10 bd 2d e9 f0 41 4f f4 80 75 2c 46
+			0f 21 01 20 19 f6 fe fc 07 46 ae 00 00 23 32 46
+			0f 21 01 20 19 f6 54 fc 64 1e fd d2 0f 21 01 20
+			19 f6 75 fd 04 46 00 23 3a 46 0f 21 01 20 19 f6
+			47 fc 14 b1 00 20 bd e8 f0 81 0e 21 01 20 19 f6
+			e1 fc 04 46 00 23 32 46 0e 21 01 20 19 f6 38 fc
+			6d 1e fd d2 0e 21 01 20 19 f6 59 fd 05 46 00 23
+			22 46 0e 21 01 20 19 f6 2b fc 0d b1 01 20 e2 e7
+			02 20 e0 e7 59 57 20 00 b8 57 20 00 05 48 04 49
+			14 30 fe f7 fe be 05 48 03 49 70 30 fe f7 f9 be
+			1d 46 20 00 25 0c 01 00 29 46 20 00 79 0b 01 00
+			08 49 09 48 fe f7 ed be 08 49 09 48 fe f7 e9 be
+			08 49 09 48 fe f7 e5 be 09 48 08 49 48 30 fe f7
+			e0 be 00 00 b9 50 20 00 1d ca 02 00 e5 50 20 00
+			f5 00 04 00 87 51 20 00 71 01 04 00 35 46 20 00
+			2d ca 02 00 03 48 02 49 80 1c fe f7 ca be 00 00
+			51 46 20 00 27 37 01 00 01 49 02 48 fe f7 c1 be
+			31 53 20 00 49 77 02 00 05 48 04 49 1c 30 fe f7
+			b8 be 05 48 03 49 1c 30 fe f7 b3 be 59 46 20 00
+			25 39 04 00 65 46 20 00 4d da 03 00 05 48 04 49
+			54 30 fe f7 a6 be 05 48 03 49 64 30 fe f7 a1 be
+			71 46 20 00 69 06 03 00 7b 46 20 00 a9 1e 04 00
+			01 49 02 48 fe f7 95 be 81 56 20 00 3d 3f 03 00
+			03 48 02 49 80 1c fe f7 8c be 00 00 8d 46 20 00
+			db 42 04 00 10 b5 ff f7 77 fe ff f7 7f fe ff f7
+			87 fe ff f7 8f fe ff f7 97 fe ff f7 9a fe ff f7
+			9d fe ff f7 9f fe ff f7 a2 fe ff f7 a4 fe ff f7
+			a7 fe ff f7 aa fe ff f7 ad fe ff f7 d5 fe ff f7
+			d7 fe ff f7 da fe ff f7 e9 fe ff f7 eb fe ff f7
+			ed fe ff f7 fd fe ff f7 59 ff ff f7 5c ff ff f7
+			67 ff ff f7 69 ff ff f7 6b ff ff f7 6d ff ff f7
+			81 ff ff f7 89 ff ff f7 8f ff ff f7 92 ff ff f7
+			9d ff ff f7 a0 ff ff f7 ab ff bd e8 10 40 ff f7
+			af bf 00 00
+
+     } END_COMMENTED_BYTES
+}
+# TIER2: end of INIT_AREA
+
+# ^^^ $AUTOGEN(INCLUDE{sections.agi})
+
+# ^^^ $AUTOGEN(INCLUDE{bld/agiauto.agi})
+
+
+
+# vvv $AUTOGEN(INCLUDE_FROM_TIER2{configdata_common.agi})
+###############################################################################
+#
+# THIS INFORMATION IS PROPRIETARY TO BROADCOM CORPORATION
+#
+###############################################################################
+#
+# File: configdata_common.agi
+#
+# Generic baseline configuration template for the BCM2049A0
+# This file contains the AUTOGEN information for all code and
+# data patches required for every product using this device.
+# It will be included in the product configdata.ags file:
+#
+###############################################################################
+# vvv $AUTOGEN(INCLUDE{./patch/InitHooks/InitHooks.agi})
+
+ENTRY "Function Call"
+{
+        "Address" = 0x002057c0 # <<< $AUTOGEN(ADDR{postVSInitFunc_Init})
+}
+
+# end of InitHooks.agi
+
+# ^^^ $AUTOGEN(INCLUDE{./patch/InitHooks/InitHooks.agi})
+
+
+ENTRY "Init BB Register Bit Fields"
+{
+        "Num entries" = 70
+
+        # vvv $AUTOGEN(INCLUDE_FROM_TIER2{patch/InitHooks/bt_rf_masked_regs.agi})
+
+
+
+    #HWCQ BLTH02577850
+    #0x600010  =
+    "Register address[0]" = 0x600010
+    "Bit field mask[0]" = 0xFFFFFFFF
+    "Value[0]" = 0x00000008
+
+    #HWCQ BLTH02577850
+    #0x600038  =
+    "Register address[1]" = 0x600038
+    "Bit field mask[1]" = 0xFFFFFFFF
+    "Value[1]" = 0x00000090
+
+    #HWCQ BLTH02577850
+    #0x60006c  =
+    "Register address[2]" = 0x60006c
+    "Bit field mask[2]" = 0xFFFFFFFF
+    "Value[2]" = 0x0000000f
+
+    #HWCQ BLTH02577850
+    #0x600124  =
+    "Register address[3]" = 0x600124
+    "Bit field mask[3]" = 0xFFFFFFFF
+    "Value[3]" = 0x00000055
+
+    #HWCQ BLTH02577850
+    #0x600128  =
+    "Register address[4]" = 0x600128
+    "Bit field mask[4]" = 0xFFFFFFFF
+    "Value[4]" = 0x00000079
+
+    #HWCQ BLTH02577850
+    #0x60012c  =
+    "Register address[5]" = 0x60012c
+    "Bit field mask[5]" = 0xFFFFFFFF
+    "Value[5]" = 0x00000004
+
+    #HWCQ BLTH02577850
+    #0x600130  =
+    "Register address[6]" = 0x600130
+    "Bit field mask[6]" = 0xFFFFFFFF
+    "Value[6]" = 0x00000056
+
+    #HWCQ BLTH02577850
+    #0x600134  =
+    "Register address[7]" = 0x600134
+    "Bit field mask[7]" = 0xFFFFFFFF
+    "Value[7]" = 0x00000095
+
+    #HWCQ BLTH02577850
+    #0x600138  =
+    "Register address[8]" = 0x600138
+    "Bit field mask[8]" = 0xFFFFFFFF
+    "Value[8]" = 0x00000055
+
+    #HWCQ BLTH02577850
+    #0x60013c  =
+    "Register address[9]" = 0x60013c
+    "Bit field mask[9]" = 0xFFFFFFFF
+    "Value[9]" = 0x00000079
+
+    #HWCQ BLTH02577850
+    #0x600140  =
+    "Register address[10]" = 0x600140
+    "Bit field mask[10]" = 0xFFFFFFFF
+    "Value[10]" = 0x00000004
+
+    #HWCQ BLTH02577850
+    #0x600144  =
+    "Register address[11]" = 0x600144
+    "Bit field mask[11]" = 0xFFFFFFFF
+    "Value[11]" = 0x00000056
+
+    #HWCQ BLTH02577850
+    #0x600148  =
+    "Register address[12]" = 0x600148
+    "Bit field mask[12]" = 0xFFFFFFFF
+    "Value[12]" = 0x00000095
+
+    #HWCQ BLTH02577850
+    #0x600184  =
+    "Register address[13]" = 0x600184
+    "Bit field mask[13]" = 0xFFFFFFFF
+    "Value[13]" = 0x00000180
+
+    #HWCQ BLTH02577850
+    #0x600194  =
+    "Register address[14]" = 0x600194
+    "Bit field mask[14]" = 0xFFFFFFFF
+    "Value[14]" = 0x00000959
+
+    #HWCQ BLTH02577850
+    #0x6001b8  =
+    "Register address[15]" = 0x6001b8
+    "Bit field mask[15]" = 0xFFFFFFFF
+    "Value[15]" = 0x00000080
+
+    #HWCQ BLTH02577850
+    #0x6001e0  =
+    "Register address[16]" = 0x6001e0
+    "Bit field mask[16]" = 0xFFFFFFFF
+    "Value[16]" = 0x00000060
+
+    #HWCQ BLTH02577850
+    #0x60020c  =
+    "Register address[17]" = 0x60020c
+    "Bit field mask[17]" = 0xFFFFFFFF
+    "Value[17]" = 0x0000e000
+
+    # HW CQ btrf_reg86 BLTH03479294
+    "Register address[18]" = 0x600218
+    "Bit field mask[18]" = 0xFFFFFFFF
+    "Value[18]" = 0x00009555
+
+    #HWCQ BLTH02577850
+    #0x60021c  =
+    "Register address[19]" = 0x60021c
+    "Bit field mask[19]" = 0xFFFFFFFF
+    "Value[19]" = 0x000006a8
+
+    #HWCQ BLTH03479294
+    #0x600220  =
+    "Register address[20]" = 0x600220
+    "Bit field mask[20]" = 0xFFFFFFFF
+    "Value[20]" = 0x000008b0
+
+    #HWCQ BLTH02577850
+    #0x600224  =
+    "Register address[21]" = 0x600224
+    "Bit field mask[21]" = 0xFFFFFFFF
+    "Value[21]" = 0x000006a8
+
+    #HWCQ BLTH02577850
+    #0x6002c4  =
+    "Register address[22]" = 0x6002c4
+    "Bit field mask[22]" = 0xFFFFFFFF
+    "Value[22]" = 0x00000011
+
+    #HWCQ BLTH02577850
+    #0x6002f0  =
+    "Register address[23]" = 0x6002f0
+    "Bit field mask[23]" = 0xFFFFFFFF
+    "Value[23]" = 0x00004700
+
+    #HWCQ BLTH02577850
+    #0x6002f4  =
+    "Register address[24]" = 0x6002f4
+    "Bit field mask[24]" = 0xFFFFFFFF
+    "Value[24]" = 0x00000001
+
+    #HWCQ BLTH02577850
+    #0x600314  =
+    "Register address[25]" = 0x600314
+    "Bit field mask[25]" = 0xFFFFFFFF
+    "Value[25]" = 0x00003f00
+
+    #HWCQ BLTH02577850
+    #0x60031c  =
+    "Register address[26]" = 0x60031c
+    "Bit field mask[26]" = 0xFFFFFFFF
+    "Value[26]" = 0x00000010
+
+    #HWCQ BLTH03479294
+    #0x600344  =
+    "Register address[27]" = 0x600344
+    "Bit field mask[27]" = 0xFFFFFFFF
+    "Value[27]" = 0x00000030
+
+    #HWCQ BLTH03479294
+    #0x6003f4  =
+    "Register address[28]" = 0x6003f4
+    "Bit field mask[28]" = 0xFFFFFFFF
+    "Value[28]" = 0x00000c78
+
+    #HWCQ BLTH02577850
+    #0x31fc30  =
+    "Register address[29]" = 0x31fc30
+    "Bit field mask[29]" = 0xFFFFFFFF
+    "Value[29]" = 0x0000046f
+
+    #HWCQ BLTH02577850
+    #0x31fc3c  =
+    "Register address[30]" = 0x31fc3c
+    "Bit field mask[30]" = 0xFFFFFFFF
+    "Value[30]" = 0x0000b000
+
+    #HWCQ BLTH02577850
+    #0x31fc58  =
+    "Register address[31]" = 0x31fc58
+    "Bit field mask[31]" = 0xFFFFFFFF
+    "Value[31]" = 0x00006298
+
+    #HWCQ BLTH02577850
+    #0x31fc5c  =
+    "Register address[32]" = 0x31fc5c
+    "Bit field mask[32]" = 0xFFFFFFFF
+    "Value[32]" = 0x00000002
+
+    #HWCQ BLTH02577850
+    #0x31fc64  =
+    "Register address[33]" = 0x31fc64
+    "Bit field mask[33]" = 0xFFFFFFFF
+    "Value[33]" = 0x0000201f
+
+    #HWCQ BLTH02577850
+    #0x31fcc8  =
+    "Register address[34]" = 0x31fcc8
+    "Bit field mask[34]" = 0xFFFFFFFF
+    "Value[34]" = 0x00008210
+
+    #HWCQ BLTH02577850
+    #0x31fccc  =
+    "Register address[35]" = 0x31fccc
+    "Bit field mask[35]" = 0xFFFFFFFF
+    "Value[35]" = 0x00004028
+
+    #HWCQ BLTH02577850, updated with BLTH03480756
+    #0x31fcd0  =
+    "Register address[36]" = 0x31fcd0
+    "Bit field mask[36]" = 0xFFFFFFFF
+    "Value[36]" = 0x0000c908
+
+    #HWCQ BLTH02577850 - HW CQ BLTH03479294 the same setting, BLTH03480756
+    #0x31fcd4  =
+    "Register address[37]" = 0x31fcd4
+    "Bit field mask[37]" = 0xFFFFFFFF
+    "Value[37]" = 0x0000c100
+
+    #HWCQ BLTH02577850, BLTH03480756
+    #0x31fcdc  =
+    "Register address[38]" = 0x31fcdc
+    "Bit field mask[38]" = 0xFFFFFFFF
+    "Value[38]" = 0x0000c808
+
+    #HWCQ BLTH03479294
+    "Register address[39]" = 0x31fce0
+    "Bit field mask[39]" = 0xFFFFFFFF
+    "Value[39]" = 0x0000c707
+
+    #HWCQ BLTH02577850
+    #0x31fce4  =
+    "Register address[40]" = 0x31fce4
+    "Bit field mask[40]" = 0xFFFFFFFF
+    "Value[40]" = 0x0000884a
+
+    #HWCQ BLTH02577850
+    #0x31fce8  =
+    "Register address[41]" = 0x31fce8
+    "Bit field mask[41]" = 0xFFFFFFFF
+    "Value[41]" = 0x0000c80d
+
+    #HWCQ BLTH02577850
+    #0x31fd00  =
+    "Register address[42]" = 0x31fd00
+    "Bit field mask[42]" = 0xFFFFFFFF
+    "Value[42]" = 0x0000a200
+
+    #HWCQ BLTH02577850
+    #0x31fdcc  =
+    "Register address[43]" = 0x31fdcc
+    "Bit field mask[43]" = 0xFFFFFFFF
+    "Value[43]" = 0x00008000
+
+    #HWCQ BLTH02577850
+    #0x31fdf0  =
+    "Register address[44]" = 0x31fdf0
+    "Bit field mask[44]" = 0xFFFFFFFF
+    "Value[44]" = 0x00001500
+
+    #HWCQ BLTH02577850
+    #0x31fdf4  =
+    "Register address[45]" = 0x31fdf4
+    "Bit field mask[45]" = 0xFFFFFFFF
+    "Value[45]" = 0x00000066
+
+    #HWCQ BLTH02577850
+    #0x31fdf8  =
+    "Register address[46]" = 0x31fdf8
+    "Bit field mask[46]" = 0xFFFFFFFF
+    "Value[46]" = 0x00004529
+
+    #HWCQ BLTH02577850
+    #0x31feac  =
+    "Register address[47]" = 0x31feac
+    "Bit field mask[47]" = 0xFFFFFFFF
+    "Value[47]" = 0x000039ea
+
+    #HWCQ BLTH02577850
+    #0x31fedc  =
+    "Register address[48]" = 0x31fedc
+    "Bit field mask[48]" = 0xFFFFFFFF
+    "Value[48]" = 0x000002f1
+
+    #HWCQ BLTH02577850
+    #0x31ff28  =
+    "Register address[49]" = 0x31ff28
+    "Bit field mask[49]" = 0xFFFFFFFF
+    "Value[49]" = 0x00000842
+
+    #HWCQ BLTH02577850
+    #0x31ff34  =
+    "Register address[50]" = 0x31ff34
+    "Bit field mask[50]" = 0xFFFFFFFF
+    "Value[50]" = 0x00006216
+
+    #HWCQ BLTH02577850
+    #0x31ff38  =
+    "Register address[51]" = 0x31ff38
+    "Bit field mask[51]" = 0xFFFFFFFF
+    "Value[51]" = 0x0000218d
+
+    #HWCQ BLTH03479294
+    #0x31ff58  =
+    "Register address[52]" = 0x31ff58
+    "Bit field mask[52]" = 0xFFFFFFFF
+    "Value[52]" = 0x000001e4
+
+    #HWCQ BLTH02577850
+    #0x31ff6c  =
+    "Register address[53]" = 0x31ff6c
+    "Bit field mask[53]" = 0xFFFFFFFF
+    "Value[53]" = 0x000000e7
+
+    #HWCQ BLTH02577850
+    #0x31ff70  =
+    "Register address[54]" = 0x31ff70
+    "Bit field mask[54]" = 0xFFFFFFFF
+    "Value[54]" = 0x0000031b
+
+    #HWCQ BLTH02577850
+    #0x31ff74  =
+    "Register address[55]" = 0x31ff74
+    "Bit field mask[55]" = 0xFFFFFFFF
+    "Value[55]" = 0x000003ea
+
+    #HWCQ BLTH03479294
+    #0x31ff78  =
+    "Register address[56]" = 0x31ff78
+    "Bit field mask[56]" = 0xFFFFFFFF
+    "Value[56]" = 0x0000004b
+
+    #HWCQ BLTH03479294
+    #0x31ff7c  =
+    "Register address[57]" = 0x31ff7c
+    "Bit field mask[57]" = 0xFFFFFFFF
+    "Value[57]" = 0x00000008
+
+    #HWCQ BLTH03479294
+    #0x31ff80  =
+    "Register address[58]" = 0x31ff80
+    "Bit field mask[58]" = 0xFFFFFFFF
+    "Value[58]" = 0x0000037a
+
+    #HWCQ BLTH03479294
+    #0x31ff84  =
+    "Register address[59]" = 0x31ff84
+    "Bit field mask[59]" = 0xFFFFFFFF
+    "Value[59]" = 0x0000000e
+
+    #HWCQ BLTH03479294
+    #0x31ff88  =
+    "Register address[60]" = 0x31ff88
+    "Bit field mask[60]" = 0xFFFFFFFF
+    "Value[60]" = 0x00000387
+
+    #HWCQ BLTH03479294
+    #0x31ff8c  =
+    "Register address[61]" = 0x31ff8c
+    "Bit field mask[61]" = 0xFFFFFFFF
+    "Value[61]" = 0x00000000
+
+    #HWCQ BLTH03479294
+    #0x31ff90  =
+    "Register address[62]" = 0x31ff90
+    "Bit field mask[62]" = 0xFFFFFFFF
+    "Value[62]" = 0x00000327
+
+    #HW CQ BLTH03457002 - the same as HW CQ BLTH03479294
+    "Register address[63]" = 0x31ff94
+    "Bit field mask[63]" = 0xFFFFFFFF
+    "Value[63]" = 0x00000064
+
+    #HWCQ BLTH02577850
+    #0x31ffe0  =
+    "Register address[64]" = 0x31ffe0
+    "Bit field mask[64]" = 0xFFFFFFFF
+    "Value[64]" = 0x0000480d
+
+    #HWCQ BLTH02577850
+    #0x31ffe8  =
+    "Register address[65]" = 0x31ffe8
+    "Bit field mask[65]" = 0xFFFFFFFF
+    "Value[65]" = 0x0000000a
+
+    #HWCQ BLTH03479294
+    #0x31fff8  =
+    "Register address[66]" = 0x31fff8
+    "Bit field mask[66]" = 0xFFFFFFFF
+    "Value[66]" = 0x00008214
+
+    # 3123454
+    # btrf_reg85_adr HW CQ BLTH03479294
+    "Register address[67]" = 0x600214
+    "Bit field mask[67]" = 0xFFFFFFFF
+    "Value[67]" = 0xf01
+
+
+    # HWCQ BLTH03479294 , BLTH03480756
+    "Register address[68]" = 0x31fcd8
+    "Bit field mask[68]" = 0xFFFFFFFF
+    "Value[68]" = 0x8833
+
+	# BCM20732A1-2438
+	"Register address[69]" = 0x200dcc
+    "Bit field mask[69]" = 0x30
+    "Value[69]" = 0x20
+
+        # ^^^ $AUTOGEN(INCLUDE_FROM{patch/InitHooks/bt_rf_masked_regs.agi})
+}
+
+
+# End of configdata_common.agi
+
+# ^^^ $AUTOGEN(INCLUDE_FROM{configdata_common.agi})
