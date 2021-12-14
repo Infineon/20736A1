@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<baseview>
+  <mcu>CortexM3</mcu>
+  <vendor>Cypress</vendor>
+  <flash>0</flash>
+  <ram>61440</ram>
+  <package>32-QFN</package>
+  <minvoltage>1620</minvoltage>
+  <maxvoltage>3630</maxvoltage>
+  <description>The CYW20736A1KML2G device.</description>
+</baseview>

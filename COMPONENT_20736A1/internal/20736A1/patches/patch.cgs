@@ -1,31 +1,11 @@
-
-
-
-##$$DEFINE (DEBUG)
 DEFINITION <configdef20736a1.hdf>
-
-
 ENTRY "Config Data Version"
 {
 }
-
 ENTRY "Spiffy1 Clock Speed"
 {
     "Speed" = 12000000
 }
-
-## Set to BT 4.0
-#ENTRY "Data" = "rm_SpecSupportBitMask"
-#{
-#    "Address" = 0x00200b35
-#
-#    "Data" =
-#     COMMENTED_BYTES
-#     {
-#        <hex> 17
-#     } END_COMMENTED_BYTES
-#}
-
 ENTRY "Data" = "enable_optimized_sfi_read"
 {
 	"Address" = 0x0020455c
@@ -36,361 +16,147 @@ ENTRY "Data" = "enable_optimized_sfi_read"
 	   01
 	 } END_COMMENTED_BYTES
 }
-
 ENTRY "PMU Crystal Warm up Time"
 {
    "Crystal warm up time" = 2800
 }
-
-#HW CQ BLTH03123454
 ENTRY "Data"="btrf_reg85BLE"
 {
-    # UINT32 btrf_reg85BLE
-    "Address"=0x00201188 # <<< $AUTOGEN(ADDR{btrf_reg85BLE})
+    "Address"=0x00201188
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           01 0f 00 00 # 0x00000f02
+           01 0f 00 00
         } END_COMMENTED_BYTES
 }
-
-
-#HW CQ BLTH03123454
-# settings for LE test mode
 ENTRY "Data"="synthPuCtrlBLE_test"
 {
-    #UINT32 synthPuCtrlBLE_test   = 0xc909;
-    "Address"=0x00201114 # <<< $AUTOGEN(ADDR{synthPuCtrlBLE_test})
+    "Address"=0x00201114
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           07 C9 00 00 # 0x0000c909
+           07 C9 00 00
         } END_COMMENTED_BYTES
 }
-
-#HW CQ BLTH03123454
-# settings for LE normal mode
 ENTRY "Data"="synthPuCtrlBLE"
 {
-    # UINT32 synthPuCtrlBLE
-    "Address"=0x00201144 # <<< $AUTOGEN(ADDR{synthPuCtrlBLE})
+    "Address"=0x00201144
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           09 C9 00 00 # 0x0000c909
+           09 C9 00 00
         } END_COMMENTED_BYTES
 }
-
-#HW CQ BLTH03123454
 ENTRY "Data"="kvcoCalPuCtrlBLE_test"
 {
-    # UINT32 kvcoCalPuCtrlBLE_test = 0xc100
-    "Address"=0x00201128 # <<< $AUTOGEN(ADDR{kvcoCalPuCtrlBLE_test})
+    "Address"=0x00201128
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           00 C1 00 00 # 0x0000c100
+           00 C1 00 00
         } END_COMMENTED_BYTES
 }
-
-#HW CQ BLTH03123454
 ENTRY "Data"="kvcoCalPuCtrlBLE"
 {
-    #UINT32 kvcoCalPuCtrlBLE      = 0xc100;
-    "Address"=0x00201158 # <<< $AUTOGEN(ADDR{kvcoCalPuCtrlBLE})
+    "Address"=0x00201158
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           00 C1 00 00 # 0x0000c100
+           00 C1 00 00
         } END_COMMENTED_BYTES
 }
-
-#HW CQ BLTH03123454
 ENTRY "Data"="vcoloPuCtrlBLE_test"
 {
-    #UINT32 vcoloPuCtrlBLE_test   = 0xc808;
-    "Address"=0x00201110 # <<< $AUTOGEN(ADDR{vcoloPuCtrlBLE_test})
+    "Address"=0x00201110
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           09 C8 00 00 # 0x0000c808
+           09 C8 00 00
         } END_COMMENTED_BYTES
 }
-
-#HW CQ BLTH03123454
 ENTRY "Data"="vcoloPuCtrlBLE"
 {
-    #UINT32 vcoloPuCtrlBLE        = 0xc808;
-    "Address"=0x00201140 # <<< $AUTOGEN(ADDR{vcoloPuCtrlBLE})
+    "Address"=0x00201140
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           08 C8 00 00 # 0x0000c808
+           08 C8 00 00
         } END_COMMENTED_BYTES
 }
-
-#HW CQ BLTH03123454
 ENTRY "Data"="dsadcPuCtrlBLE_test"
 {
-    #UINT32 dsadcPuCtrlBLE_test   = 0xc808;
-    "Address"=0x00201118 # <<< $AUTOGEN(ADDR{dsadcPuCtrlBLE_test})
+    "Address"=0x00201118
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           08 C7 00 00 # 0x0000c808
+           08 C7 00 00
         } END_COMMENTED_BYTES
 }
-
-#HW CQ BLTH03123454
 ENTRY "Data"="dsadcPuCtrlBLE"
 {
-    ##UINT32 dsadcPuCtrlBLE        = 0xc808;;
-    "Address"=0x00201148 # <<< $AUTOGEN(ADDR{dsadcPuCtrlBLE})
+    "Address"=0x00201148
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           07 C7 00 00 # 0x0000c808
+           07 C7 00 00
         } END_COMMENTED_BYTES
 }
-
-
-#HW CQ BLTH03123454
 ENTRY "Data"="pwrRampCtrlBLE_test"
 {
-    #UINT32 pwrRampCtrlBLE_test   = 0x8314;
-    "Address"=0x00201124 # <<< $AUTOGEN(ADDR{pwrRampCtrlBLE_test})
+    "Address"=0x00201124
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           14 81 00 00 # 0x8114
+           14 81 00 00
         } END_COMMENTED_BYTES
 }
-
-#HW CQ BLTH03123454
 ENTRY "Data"="pwrRampCtrlBLE"
 {
-    #UINT32 pwrRampCtrlBLE        = 0x8314;
-    "Address"=0x00201154 # <<< $AUTOGEN(ADDR{pwrRampCtrlBLE})
+    "Address"=0x00201154
     "Data"=
         COMMENTED_BYTES
         {
            <hex>
-           14 81 00 00 # 0x8114
+           14 81 00 00
         } END_COMMENTED_BYTES
 }
-
-
-
-# vvv $AUTOGEN(INCLUDE_FROM_TIER2{patch/InitHooks/config_items.agi})
-
-
-######################################################################
-#                          TCA ENTRIES
-######################################################################
-# vvv $AUTOGEN(INCLUDE{tca_tbl.agi})
-###############################################################################
-# 2073x TCA Control
-###############################################################################
 ENTRY "Temperature Correction Algorithm"
 {
    "Enable" = 1
 }
-
-###############################################################################
-# 2073x TCA Table Values
-###############################################################################
 ENTRY "TCA Conversion Values with Page Descriptors"
 {
     "FAB ID"                = 0xFF
-
-    # Switching points
-    # Note: Numbers include a +50 offset
-
     "Num TSteps"            = 4
-
-    "Tmin[0]"               = 20  # -30 degree-C
-    "Tmin[1]"               = 30  # -20 degree-C
-    "Tmin[2]"               = 50  #   0 degree-C
-    "Tmin[3]"               = 90  #  40 degree-C
-
-
-   # Number of 8-bit pages
-   # 1-5
+    "Tmin[0]"               = 20
+    "Tmin[1]"               = 30
+    "Tmin[2]"               = 50
+    "Tmin[3]"               = 90
     "Num Pages8"            = 0
-
-    # Number of 16-bit pages
-    # 1
     "Num Pages16"           = 1
-
-
-    #####################################
-    # PAGE DESCRIPTORS
-    #
-    # Legend:
-    # Single array index = [page]
-    # Dual array index = [page][reg]
-    #####################################
-
-    # 8-bit page descriptors (template)
-
-    # 16-bit page descriptor
-
-       # Page 0
        "BaseAddress16[0]"      = 0x00310000
            "NumRegs16[0]"      = 1
-
-       #
        "AdrOffset16[0][0]"     = 0xFF58
          "Bitmask16[0][0]"     = 0x007F
-
-
-    #####################################
-    # PAGE DATA
-    #
-    # Legend:
-    # Triple Array indices: [TStep][Page][Reg]
-    #####################################
-
-    #-----------
-    # 8-bit data
-    #-----------
-
-    # TStep 0
-       # Page 0
-       # Page 1
-       # Page 2
-       # Page 3
-       # Page 4
-
-    # TStep 1
-       # Page 0
-       # Page 1
-       # Page 2
-       # Page 3
-       # Page 4
-
-    # TStep 2
-       # Page 0
-       # Page 1
-       # Page 2
-       # Page 3
-       # Page 4
-
-    # TStep 3
-       # Page 0
-       # Page 1
-       # Page 2
-       # Page 3
-       # Page 4
-
-    # TStep 4
-       # Page 0
-       # Page 1
-       # Page 2
-       # Page 3
-       # Page 4
-
-    # TStep 5
-       # Page 0
-       # Page 1
-       # Page 2
-       # Page 3
-       # Page 4
-
-    #------------
-    # 16-bit data
-    #------------
-
-    # TStep 0
-          # Page 0
             "Data16[0][0][0]"     = 0x1e0
           "Offset16[0][0][0]"     = 0x00
-
-
-          # The rest of Page 0 is spare
-
-          # Only 1 page supported for 16-bit data
-
-       # TStep 1
-          # Page 0
             "Data16[1][0][0]"     = 0x1e2
           "Offset16[1][0][0]"     = 0x00
-
-
-          # The rest of Page 0 is spare
-
-          # Only 1 page supported for 16-bit data
-
-       # TStep 2
-          # Page 0
             "Data16[2][0][0]"     = 0x1e4
           "Offset16[2][0][0]"     = 0x00
-
-
-          # The rest of Page 0 is spare
-
-          # Only 1 page supported for 16-bit data
-
-       # TStep 3
-          # Page 0
             "Data16[3][0][0]"     = 0x1e6
        "Offset16[3][0][0]"     = 0x00
-       # The rest of Page 0 is spare
-
-       # Only 1 page supported for 16-bit data
-
-    # TStep 4
-       # Page 0
-
-       # The rest of Page 0 is spare
-
-       # Only 1 page supported for 16-bit data
-
-    # TStep 5
-       # Page 0
-
-       # The rest of Page 0 is spare
-
-       # Only 1 page supported for 16-bit data
 }
-
-# ^^^ $AUTOGEN(INCLUDE{tca_tbl.agi})
-
-######################################################################
-#                     R/RC CALIBRATION ENTRIES
-######################################################################
-# vvv $AUTOGEN(INCLUDE{rrccal_tbl.agi})
-
-
-
-
-
-# ^^^ $AUTOGEN(INCLUDE{rrccal_tbl.agi})
-
-
-
-
-
-
-# ^^^ $AUTOGEN(INCLUDE_FROM{patch/InitHooks/config_items.agi})
-
-##############################################################################
-# Need to include glue code autogenerated by gen_agi.pl before including code patches
-##############################################################################
-# vvv $AUTOGEN(INCLUDE{bld/agiauto.agi})
-# vvv $AUTOGEN(INCLUDE{sections.agi})
-
-# TIER2: RO_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf
 ENTRY "Data" = "RO_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf"
 {
   "Address" = 0x00204568
@@ -682,12 +448,8 @@ ENTRY "Data" = "RO_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.el
 			05 46 01 46 03 48 3e f6 c8 fd 02 48 64 1c 28 44
 			84 70 70 bd 70 41 20 00 01 b5 43 f6 37 f8 01 bd
 			bd 5a 57 20 00 02 00 fe 00 00 00 00 00 00 00 00
-
      } END_COMMENTED_BYTES
 }
-# TIER2: end of RO_AREA
-
-# TIER2: RW_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf
 ENTRY "Data" = "RW_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf"
 {
   "Address" = 0x00205728
@@ -701,14 +463,8 @@ ENTRY "Data" = "RW_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.el
 			00 00 07 10 00 00 00 00 00 00 00 00 00 00 00 00
 			ab 50 20 00 00 00 00 00 00 00 00 00 00 00 00 00
 			00 00 00 00 d0 07 00 00
-
      } END_COMMENTED_BYTES
 }
-# TIER2: end of RW_AREA
-
-# TIER2: CONFIG_AREA from : empty section
-
-# TIER2: ID_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf
 ENTRY "Data" = "ID_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf"
 {
   "Address" = 0x002057b8
@@ -716,13 +472,9 @@ ENTRY "Data" = "ID_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.el
    COMMENTED_BYTES
      {
         <hex>
-            6c 1d 39 01
-
+            27 0d ff 01
      } END_COMMENTED_BYTES
 }
-# TIER2: end of ID_AREA
-
-# TIER2: INIT_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf
 ENTRY "Data" = "INIT_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.elf"
 {
   "Address" = 0x002057c0
@@ -808,472 +560,223 @@ ENTRY "Data" = "INIT_AREA from tier2/brcm/mandatory/bld/A_20732A1/20732_ram_ext.
 			81 ff ff f7 89 ff ff f7 8f ff ff f7 92 ff ff f7
 			9d ff ff f7 a0 ff ff f7 ab ff bd e8 10 40 ff f7
 			af bf 00 00
-
      } END_COMMENTED_BYTES
 }
-# TIER2: end of INIT_AREA
-
-# ^^^ $AUTOGEN(INCLUDE{sections.agi})
-
-# ^^^ $AUTOGEN(INCLUDE{bld/agiauto.agi})
-
-
-
-# vvv $AUTOGEN(INCLUDE_FROM_TIER2{configdata_common.agi})
-###############################################################################
-#
-# THIS INFORMATION IS PROPRIETARY TO BROADCOM CORPORATION
-#
-###############################################################################
-#
-# File: configdata_common.agi
-#
-# Generic baseline configuration template for the BCM2049A0
-# This file contains the AUTOGEN information for all code and
-# data patches required for every product using this device.
-# It will be included in the product configdata.ags file:
-#
-###############################################################################
-# vvv $AUTOGEN(INCLUDE{./patch/InitHooks/InitHooks.agi})
-
 ENTRY "Function Call"
 {
-        "Address" = 0x002057c0 # <<< $AUTOGEN(ADDR{postVSInitFunc_Init})
+        "Address" = 0x002057c0
 }
-
-# end of InitHooks.agi
-
-# ^^^ $AUTOGEN(INCLUDE{./patch/InitHooks/InitHooks.agi})
-
-
 ENTRY "Init BB Register Bit Fields"
 {
         "Num entries" = 70
-
-        # vvv $AUTOGEN(INCLUDE_FROM_TIER2{patch/InitHooks/bt_rf_masked_regs.agi})
-
-
-
-    #HWCQ BLTH02577850
-    #0x600010  =
     "Register address[0]" = 0x600010
     "Bit field mask[0]" = 0xFFFFFFFF
     "Value[0]" = 0x00000008
-
-    #HWCQ BLTH02577850
-    #0x600038  =
     "Register address[1]" = 0x600038
     "Bit field mask[1]" = 0xFFFFFFFF
     "Value[1]" = 0x00000090
-
-    #HWCQ BLTH02577850
-    #0x60006c  =
     "Register address[2]" = 0x60006c
     "Bit field mask[2]" = 0xFFFFFFFF
     "Value[2]" = 0x0000000f
-
-    #HWCQ BLTH02577850
-    #0x600124  =
     "Register address[3]" = 0x600124
     "Bit field mask[3]" = 0xFFFFFFFF
     "Value[3]" = 0x00000055
-
-    #HWCQ BLTH02577850
-    #0x600128  =
     "Register address[4]" = 0x600128
     "Bit field mask[4]" = 0xFFFFFFFF
     "Value[4]" = 0x00000079
-
-    #HWCQ BLTH02577850
-    #0x60012c  =
     "Register address[5]" = 0x60012c
     "Bit field mask[5]" = 0xFFFFFFFF
     "Value[5]" = 0x00000004
-
-    #HWCQ BLTH02577850
-    #0x600130  =
     "Register address[6]" = 0x600130
     "Bit field mask[6]" = 0xFFFFFFFF
     "Value[6]" = 0x00000056
-
-    #HWCQ BLTH02577850
-    #0x600134  =
     "Register address[7]" = 0x600134
     "Bit field mask[7]" = 0xFFFFFFFF
     "Value[7]" = 0x00000095
-
-    #HWCQ BLTH02577850
-    #0x600138  =
     "Register address[8]" = 0x600138
     "Bit field mask[8]" = 0xFFFFFFFF
     "Value[8]" = 0x00000055
-
-    #HWCQ BLTH02577850
-    #0x60013c  =
     "Register address[9]" = 0x60013c
     "Bit field mask[9]" = 0xFFFFFFFF
     "Value[9]" = 0x00000079
-
-    #HWCQ BLTH02577850
-    #0x600140  =
     "Register address[10]" = 0x600140
     "Bit field mask[10]" = 0xFFFFFFFF
     "Value[10]" = 0x00000004
-
-    #HWCQ BLTH02577850
-    #0x600144  =
     "Register address[11]" = 0x600144
     "Bit field mask[11]" = 0xFFFFFFFF
     "Value[11]" = 0x00000056
-
-    #HWCQ BLTH02577850
-    #0x600148  =
     "Register address[12]" = 0x600148
     "Bit field mask[12]" = 0xFFFFFFFF
     "Value[12]" = 0x00000095
-
-    #HWCQ BLTH02577850
-    #0x600184  =
     "Register address[13]" = 0x600184
     "Bit field mask[13]" = 0xFFFFFFFF
     "Value[13]" = 0x00000180
-
-    #HWCQ BLTH02577850
-    #0x600194  =
     "Register address[14]" = 0x600194
     "Bit field mask[14]" = 0xFFFFFFFF
     "Value[14]" = 0x00000959
-
-    #HWCQ BLTH02577850
-    #0x6001b8  =
     "Register address[15]" = 0x6001b8
     "Bit field mask[15]" = 0xFFFFFFFF
     "Value[15]" = 0x00000080
-
-    #HWCQ BLTH02577850
-    #0x6001e0  =
     "Register address[16]" = 0x6001e0
     "Bit field mask[16]" = 0xFFFFFFFF
     "Value[16]" = 0x00000060
-
-    #HWCQ BLTH02577850
-    #0x60020c  =
     "Register address[17]" = 0x60020c
     "Bit field mask[17]" = 0xFFFFFFFF
     "Value[17]" = 0x0000e000
-
-    # HW CQ btrf_reg86 BLTH03479294
     "Register address[18]" = 0x600218
     "Bit field mask[18]" = 0xFFFFFFFF
     "Value[18]" = 0x00009555
-
-    #HWCQ BLTH02577850
-    #0x60021c  =
     "Register address[19]" = 0x60021c
     "Bit field mask[19]" = 0xFFFFFFFF
     "Value[19]" = 0x000006a8
-
-    #HWCQ BLTH03479294
-    #0x600220  =
     "Register address[20]" = 0x600220
     "Bit field mask[20]" = 0xFFFFFFFF
     "Value[20]" = 0x000008b0
-
-    #HWCQ BLTH02577850
-    #0x600224  =
     "Register address[21]" = 0x600224
     "Bit field mask[21]" = 0xFFFFFFFF
     "Value[21]" = 0x000006a8
-
-    #HWCQ BLTH02577850
-    #0x6002c4  =
     "Register address[22]" = 0x6002c4
     "Bit field mask[22]" = 0xFFFFFFFF
     "Value[22]" = 0x00000011
-
-    #HWCQ BLTH02577850
-    #0x6002f0  =
     "Register address[23]" = 0x6002f0
     "Bit field mask[23]" = 0xFFFFFFFF
     "Value[23]" = 0x00004700
-
-    #HWCQ BLTH02577850
-    #0x6002f4  =
     "Register address[24]" = 0x6002f4
     "Bit field mask[24]" = 0xFFFFFFFF
     "Value[24]" = 0x00000001
-
-    #HWCQ BLTH02577850
-    #0x600314  =
     "Register address[25]" = 0x600314
     "Bit field mask[25]" = 0xFFFFFFFF
     "Value[25]" = 0x00003f00
-
-    #HWCQ BLTH02577850
-    #0x60031c  =
     "Register address[26]" = 0x60031c
     "Bit field mask[26]" = 0xFFFFFFFF
     "Value[26]" = 0x00000010
-
-    #HWCQ BLTH03479294
-    #0x600344  =
     "Register address[27]" = 0x600344
     "Bit field mask[27]" = 0xFFFFFFFF
     "Value[27]" = 0x00000030
-
-    #HWCQ BLTH03479294
-    #0x6003f4  =
     "Register address[28]" = 0x6003f4
     "Bit field mask[28]" = 0xFFFFFFFF
     "Value[28]" = 0x00000c78
-
-    #HWCQ BLTH02577850
-    #0x31fc30  =
     "Register address[29]" = 0x31fc30
     "Bit field mask[29]" = 0xFFFFFFFF
     "Value[29]" = 0x0000046f
-
-    #HWCQ BLTH02577850
-    #0x31fc3c  =
     "Register address[30]" = 0x31fc3c
     "Bit field mask[30]" = 0xFFFFFFFF
     "Value[30]" = 0x0000b000
-
-    #HWCQ BLTH02577850
-    #0x31fc58  =
     "Register address[31]" = 0x31fc58
     "Bit field mask[31]" = 0xFFFFFFFF
     "Value[31]" = 0x00006298
-
-    #HWCQ BLTH02577850
-    #0x31fc5c  =
     "Register address[32]" = 0x31fc5c
     "Bit field mask[32]" = 0xFFFFFFFF
     "Value[32]" = 0x00000002
-
-    #HWCQ BLTH02577850
-    #0x31fc64  =
     "Register address[33]" = 0x31fc64
     "Bit field mask[33]" = 0xFFFFFFFF
     "Value[33]" = 0x0000201f
-
-    #HWCQ BLTH02577850
-    #0x31fcc8  =
     "Register address[34]" = 0x31fcc8
     "Bit field mask[34]" = 0xFFFFFFFF
     "Value[34]" = 0x00008210
-
-    #HWCQ BLTH02577850
-    #0x31fccc  =
     "Register address[35]" = 0x31fccc
     "Bit field mask[35]" = 0xFFFFFFFF
     "Value[35]" = 0x00004028
-
-    #HWCQ BLTH02577850, updated with BLTH03480756
-    #0x31fcd0  =
     "Register address[36]" = 0x31fcd0
     "Bit field mask[36]" = 0xFFFFFFFF
     "Value[36]" = 0x0000c908
-
-    #HWCQ BLTH02577850 - HW CQ BLTH03479294 the same setting, BLTH03480756
-    #0x31fcd4  =
     "Register address[37]" = 0x31fcd4
     "Bit field mask[37]" = 0xFFFFFFFF
     "Value[37]" = 0x0000c100
-
-    #HWCQ BLTH02577850, BLTH03480756
-    #0x31fcdc  =
     "Register address[38]" = 0x31fcdc
     "Bit field mask[38]" = 0xFFFFFFFF
     "Value[38]" = 0x0000c808
-
-    #HWCQ BLTH03479294
     "Register address[39]" = 0x31fce0
     "Bit field mask[39]" = 0xFFFFFFFF
     "Value[39]" = 0x0000c707
-
-    #HWCQ BLTH02577850
-    #0x31fce4  =
     "Register address[40]" = 0x31fce4
     "Bit field mask[40]" = 0xFFFFFFFF
     "Value[40]" = 0x0000884a
-
-    #HWCQ BLTH02577850
-    #0x31fce8  =
     "Register address[41]" = 0x31fce8
     "Bit field mask[41]" = 0xFFFFFFFF
     "Value[41]" = 0x0000c80d
-
-    #HWCQ BLTH02577850
-    #0x31fd00  =
     "Register address[42]" = 0x31fd00
     "Bit field mask[42]" = 0xFFFFFFFF
     "Value[42]" = 0x0000a200
-
-    #HWCQ BLTH02577850
-    #0x31fdcc  =
     "Register address[43]" = 0x31fdcc
     "Bit field mask[43]" = 0xFFFFFFFF
     "Value[43]" = 0x00008000
-
-    #HWCQ BLTH02577850
-    #0x31fdf0  =
     "Register address[44]" = 0x31fdf0
     "Bit field mask[44]" = 0xFFFFFFFF
     "Value[44]" = 0x00001500
-
-    #HWCQ BLTH02577850
-    #0x31fdf4  =
     "Register address[45]" = 0x31fdf4
     "Bit field mask[45]" = 0xFFFFFFFF
     "Value[45]" = 0x00000066
-
-    #HWCQ BLTH02577850
-    #0x31fdf8  =
     "Register address[46]" = 0x31fdf8
     "Bit field mask[46]" = 0xFFFFFFFF
     "Value[46]" = 0x00004529
-
-    #HWCQ BLTH02577850
-    #0x31feac  =
     "Register address[47]" = 0x31feac
     "Bit field mask[47]" = 0xFFFFFFFF
     "Value[47]" = 0x000039ea
-
-    #HWCQ BLTH02577850
-    #0x31fedc  =
     "Register address[48]" = 0x31fedc
     "Bit field mask[48]" = 0xFFFFFFFF
     "Value[48]" = 0x000002f1
-
-    #HWCQ BLTH02577850
-    #0x31ff28  =
     "Register address[49]" = 0x31ff28
     "Bit field mask[49]" = 0xFFFFFFFF
     "Value[49]" = 0x00000842
-
-    #HWCQ BLTH02577850
-    #0x31ff34  =
     "Register address[50]" = 0x31ff34
     "Bit field mask[50]" = 0xFFFFFFFF
     "Value[50]" = 0x00006216
-
-    #HWCQ BLTH02577850
-    #0x31ff38  =
     "Register address[51]" = 0x31ff38
     "Bit field mask[51]" = 0xFFFFFFFF
     "Value[51]" = 0x0000218d
-
-    #HWCQ BLTH03479294
-    #0x31ff58  =
     "Register address[52]" = 0x31ff58
     "Bit field mask[52]" = 0xFFFFFFFF
     "Value[52]" = 0x000001e4
-
-    #HWCQ BLTH02577850
-    #0x31ff6c  =
     "Register address[53]" = 0x31ff6c
     "Bit field mask[53]" = 0xFFFFFFFF
     "Value[53]" = 0x000000e7
-
-    #HWCQ BLTH02577850
-    #0x31ff70  =
     "Register address[54]" = 0x31ff70
     "Bit field mask[54]" = 0xFFFFFFFF
     "Value[54]" = 0x0000031b
-
-    #HWCQ BLTH02577850
-    #0x31ff74  =
     "Register address[55]" = 0x31ff74
     "Bit field mask[55]" = 0xFFFFFFFF
     "Value[55]" = 0x000003ea
-
-    #HWCQ BLTH03479294
-    #0x31ff78  =
     "Register address[56]" = 0x31ff78
     "Bit field mask[56]" = 0xFFFFFFFF
     "Value[56]" = 0x0000004b
-
-    #HWCQ BLTH03479294
-    #0x31ff7c  =
     "Register address[57]" = 0x31ff7c
     "Bit field mask[57]" = 0xFFFFFFFF
     "Value[57]" = 0x00000008
-
-    #HWCQ BLTH03479294
-    #0x31ff80  =
     "Register address[58]" = 0x31ff80
     "Bit field mask[58]" = 0xFFFFFFFF
     "Value[58]" = 0x0000037a
-
-    #HWCQ BLTH03479294
-    #0x31ff84  =
     "Register address[59]" = 0x31ff84
     "Bit field mask[59]" = 0xFFFFFFFF
     "Value[59]" = 0x0000000e
-
-    #HWCQ BLTH03479294
-    #0x31ff88  =
     "Register address[60]" = 0x31ff88
     "Bit field mask[60]" = 0xFFFFFFFF
     "Value[60]" = 0x00000387
-
-    #HWCQ BLTH03479294
-    #0x31ff8c  =
     "Register address[61]" = 0x31ff8c
     "Bit field mask[61]" = 0xFFFFFFFF
     "Value[61]" = 0x00000000
-
-    #HWCQ BLTH03479294
-    #0x31ff90  =
     "Register address[62]" = 0x31ff90
     "Bit field mask[62]" = 0xFFFFFFFF
     "Value[62]" = 0x00000327
-
-    #HW CQ BLTH03457002 - the same as HW CQ BLTH03479294
     "Register address[63]" = 0x31ff94
     "Bit field mask[63]" = 0xFFFFFFFF
     "Value[63]" = 0x00000064
-
-    #HWCQ BLTH02577850
-    #0x31ffe0  =
     "Register address[64]" = 0x31ffe0
     "Bit field mask[64]" = 0xFFFFFFFF
     "Value[64]" = 0x0000480d
-
-    #HWCQ BLTH02577850
-    #0x31ffe8  =
     "Register address[65]" = 0x31ffe8
     "Bit field mask[65]" = 0xFFFFFFFF
     "Value[65]" = 0x0000000a
-
-    #HWCQ BLTH03479294
-    #0x31fff8  =
     "Register address[66]" = 0x31fff8
     "Bit field mask[66]" = 0xFFFFFFFF
     "Value[66]" = 0x00008214
-
-    # 3123454
-    # btrf_reg85_adr HW CQ BLTH03479294
     "Register address[67]" = 0x600214
     "Bit field mask[67]" = 0xFFFFFFFF
     "Value[67]" = 0xf01
-
-
-    # HWCQ BLTH03479294 , BLTH03480756
     "Register address[68]" = 0x31fcd8
     "Bit field mask[68]" = 0xFFFFFFFF
     "Value[68]" = 0x8833
-
-	# BCM20732A1-2438
 	"Register address[69]" = 0x200dcc
     "Bit field mask[69]" = 0x30
     "Value[69]" = 0x20
-
-        # ^^^ $AUTOGEN(INCLUDE_FROM{patch/InitHooks/bt_rf_masked_regs.agi})
 }
-
-
-# End of configdata_common.agi
-
-# ^^^ $AUTOGEN(INCLUDE_FROM{configdata_common.agi})

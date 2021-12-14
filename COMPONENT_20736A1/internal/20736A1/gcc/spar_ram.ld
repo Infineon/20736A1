@@ -17,7 +17,7 @@
  */
 /*
  * Linker script for SPAR in RAM application. Modified from generic.ld
- *   2011, 2012, 2013 Changes COPYRIGHT BROADCOM CORP.
+ *   2011, 2012, 2013 Changes COPYRIGHT CYPRESS SEMICONDUCTOR.
  */
 OUTPUT_FORMAT ("elf32-littlearm", "elf32-bigarm", "elf32-littlearm")
 SEARCH_DIR(.)

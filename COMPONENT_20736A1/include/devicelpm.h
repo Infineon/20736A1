@@ -48,11 +48,16 @@
 /*******************************************************************************
 * Types and Defines
 *******************************************************************************/
+/*****************************************************************************/
+/** @defgroup devlpm       Application Management
+ *
+ * \brief Device level low power management.
+ */
 
-/**  \addtogroup application Application */
+/*****************************************************************************/
+/**  \ingroup devlpm */
 /*! @{ */
 /**
-\brief Device level low power management.
 
 This provides a concrete implementation for hid-off and sleep routines for the
 application.

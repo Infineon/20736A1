@@ -40,14 +40,6 @@
 #ifndef _BLEAPP_H_
 #define _BLEAPP_H_
 
-/*****************************************************************************/
-/** @defgroup bleapp       Application Management
- *
- *  Bluetooth LE Application Management functions
- */
-/*****************************************************************************/
-
-
 #include "bleappcfa.h"
 
 //#include "bleprofile.h" //this is needed to access bleprofile_puart_cfg
