@@ -1,6 +1,6 @@
 /*******************************************************************
 *
-* Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -180,7 +180,7 @@ typedef union INTF_CTL_REG
         /// bit 1    - one shot
         UINT32 SampleOneShot        : 1;
 
-        /// bit 2    - notch frequencey select
+        /// bit 2    - notch frequency select
         UINT32 notchFrequenceSelect : 1;
 
         /// bit 3    - adc dither disable
@@ -429,7 +429,7 @@ typedef struct
     INT32          gndReading;
 
     /// Reference voltage conversion value.
-    /// Obtained from user configuation setting or auto calibration
+    /// Obtained from user configuration setting or auto calibration
     INT32          referenceReading;
 
     /// Reference micro voltage
@@ -504,7 +504,7 @@ typedef PACKED struct
             /// bit 1   - touch enable1
             UINT32 touch_enable             : 3;
 
-            /// bit 4   - Biaso current control for compartor
+            /// bit 4   - Bias current control for compartor
             UINT32 biasCurrentCtlComp       : 1;
 
             /// bit 5   - Dither Clock Polarity Control

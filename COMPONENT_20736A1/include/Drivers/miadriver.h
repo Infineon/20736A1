@@ -1,6 +1,6 @@
 /*******************************************************************
 *
-* Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -328,7 +328,7 @@ void mia_enableKeyscanPriorToHidOff(void);
 /// Turn off internal LPOs if possible. Internal.
 void mia_turnOffLhlLpoIfPossible(void);
 
-/// Set up timed wake from deep slee.
+/// Set up timed wake from deep sleep.
 /// \param wakeupTimeInMs The number of mS to wake in after entering deep sleep.
 /// \param ref The reference clock to use.
 void mia_setupTimedWake(UINT32 wakeupTimeInMs, MiaTimedWakeRefClock ref);

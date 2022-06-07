@@ -1,6 +1,6 @@
 /*******************************************************************
 *
-* Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -115,7 +115,7 @@ enum CLK_SRC_FREQ_SEL
 /// Configures an ACLK reference channel.
 /// \param frequency The desired frequency.
 /// \param src The ACLK channel we are configuring.
-/// \freqSel The internal reference fequency to use to generated the desired frequency.
+/// \freqSel The internal reference frequency to use to generated the desired frequency.
 void aclk_configure(UINT32 frequency, UINT32 src, UINT32 freqSel);
 
 /// Disable an ACLK reference channel.

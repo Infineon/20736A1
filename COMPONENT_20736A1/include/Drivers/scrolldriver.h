@@ -1,6 +1,6 @@
 /*******************************************************************
 *
-* Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -63,7 +63,7 @@ void scroll_turnOn(void);
 
 /// Register a thread context interrupt handler.
 /// \param userfn Pointer to the callback function to be invoked.
-/// \param userdata Pointer to a context that is passed into callback when the interrupt occures.
+/// \param userdata Pointer to a context that is passed into callback when the interrupt occurs.
 void scroll_registerForInterrupt(void (*userfn)(void*), void* userdata);
 
 /// Gets the current count of the scroll wheel.

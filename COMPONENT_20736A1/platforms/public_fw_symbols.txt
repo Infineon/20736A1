@@ -4,7 +4,7 @@
 # Each symbol defined below is used in conjunction with the elf file symbol tables.
 #
 #
-# Comma Seperated Value file
+# Comma Separated Value file
 #
 # Name,     Type,     Visibility,     Rename Flag,     Rename Name,     Reserved Flag,
 #

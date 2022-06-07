@@ -1,6 +1,6 @@
 /*******************************************************************
 *
-* Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -95,7 +95,7 @@ typedef union LDO_CTL_EN_REG
 
         //
         // bit 4:2 - LDO output level when 24MHz crystal is powered down
-        // program with the same value as ldo_ctl1[3:1], if no votage step is needed
+        // program with the same value as ldo_ctl1[3:1], if no voltage step is needed
         //
         UINT32              ldo_sleep_output_level  : 3;
 
@@ -126,7 +126,7 @@ enum
 //  * ldo_ctl0_reg *
 //
 // ldo_ctl[0]   - BG low power mode, default 0
-// ldo_ctl[2:1] - LPF enable/adjust to fitler off BG noise , default disabled for faster startup
+// ldo_ctl[2:1] - LPF enable/adjust to filter off BG noise , default disabled for faster startup
 // ldo_ctl[3]   - BG power down, default power up
 // ldo_ctl[7:4] - BG PTAT Current adjustment
 // ldo_ctl[11:8]    - BG CTAT current adjustment
@@ -135,10 +135,10 @@ enum
 //
 //  * ldo_ctl1_reg *
 //
-// ldo_ctl[16]      - LDO Power down    , defautl power up
+// ldo_ctl[16]      - LDO Power down, default power up
 // ldo_ctl[19:17]   - LDO Output Voltage Adjustment
 // ldo_ctl[20]      - Enable VDS matching amplifier for low dropout, default enabled
-// ldo_ctl[21]      - Enable LDO current limite, default disable
+// ldo_ctl[21]      - Enable LDO current limit, default disable
 // ldo_ctl[22]      - Select between constant/feedback current limit mode for LDO
 // ldo_ctl[23]      - LDO current limit adjustment
 // ldo_ctl[25:24]   - adjust LDO feedback pole to compensate ESR zero
@@ -197,10 +197,10 @@ typedef union LDO_CTL1_REG
         // bit 4    - Disable VDS matching amplifier for low dropout
         UINT32      ldoVDSdisable           : 1;
 
-        // bit 5   - Enable LDO current limite
+        // bit 5   - Enable LDO current limit
         UINT32      ldocurrentLimitenable   : 1;
 
-        // bit 6    - LDO limit mode/loopback mode 0:limite 1:loopback
+        // bit 6    - LDO limit mode/loopback mode 0:limit 1:loopback
         UINT32      ldoCurrentMode          : 1;
 
         // bit 7    - limit mode adjustment

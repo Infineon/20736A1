@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+ * Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
  * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
  *
  * This software, including source code, documentation and related
@@ -35,6 +35,8 @@
 #define sr_ptu_status5       (*(volatile unsigned int *)sr_ptu_status_adr5)
 #define sr_ptu_en_adr5       0x003600ac
 #define sr_ptu_en5           (*(volatile unsigned int *)sr_ptu_en_adr5)
+#define dc_ptu_uart2_lcr_adr 0x0036049c
+#define dc_ptu_uart2_lcr     (*(volatile unsigned int *)dc_ptu_uart2_lcr_adr)
 #define dc_ptu_uart2_rfl_adr 0x003604ac
 #define dc_ptu_uart2_rfl     (*(volatile unsigned int *)dc_ptu_uart2_rfl_adr)
 #define spiffy_cfg_adr       0x00360600

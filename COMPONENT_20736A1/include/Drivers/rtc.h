@@ -1,6 +1,6 @@
 /*******************************************************************
 *
-* Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -142,7 +142,7 @@ typedef union
 } tRTC_REAL_TIME_CLOCK;
 
 
-/// Time converation reference timebase 2010/1/1.
+/// Time conversion reference timebase 2010/1/1.
 typedef enum
 {
     BASE_LINE_REF_YEAR      =   2010,

@@ -1,6 +1,6 @@
 /*******************************************************************
 *
-* Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -133,7 +133,7 @@ BOOL32 pwm_start( UINT8 id, PwmClockType clk, UINT32 toggleCount, UINT32 InitCou
 /// \param id - the PWD channel.
 /// \param   toggleCount - value on which a toggle happens.
 /// \param   InitCount  - initial value for the counter.
-/// \return whether the tranisiition is successful.
+/// \return whether the transition is successful.
 BOOL32 pwm_transitionToSubstituteValues(UINT8 id, UINT32 toggleCount, UINT32 InitCount );
 
 ///  Alternate between another set of pulse modulation values and current values.

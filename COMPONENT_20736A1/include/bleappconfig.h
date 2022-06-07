@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+ * Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
  * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
  *
  * This software, including source code, documentation and related
@@ -50,7 +50,7 @@ typedef PACKED struct
     /// 0xFF when WP is not configured
     BYTE bleapputils_eepromWpPortPin;
 
-    /// Location of the application deicated area in the EEPROM
+    /// Location of the application dedicated area in the EEPROM
     UINT16 bleapputils_eepromCustAreaOffset;
 
     /// Size of the application dedicated area in the EEPROM
