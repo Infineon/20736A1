@@ -1,6 +1,6 @@
 /*******************************************************************
 *
-* Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2016-2024, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -251,6 +251,8 @@ void assert_fail( char*   file,   INT32  line , UINT32 status);
 #endif
 #endif
 
+#define memcpy __aeabi_memcpy
+extern void *__aeabi_memcpy(void *dest, const void * src, uint32 n);
 #ifdef __cplusplus
 }
 #endif

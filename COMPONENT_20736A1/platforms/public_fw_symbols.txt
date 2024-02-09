@@ -75,6 +75,7 @@ legattdb_*                   ,           SYMBOL ,      PUBLIC,      0,          
 lel2cap_*                    ,           SYMBOL ,      PUBLIC,      0,                      ,              1
 lesmpkeys_*                  ,           SYMBOL ,      PUBLIC,      0,                      ,              1
 memcpy                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
+__aeabi_memcpy               ,           SYMBOL ,      PUBLIC,      0,                      ,              1
 memcmp                       ,           SYMBOL ,      PUBLIC,      0,                      ,              1
 mia_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
 mpi_*                        ,           SYMBOL ,      PUBLIC,      0,                      ,              1
@@ -303,3 +304,10 @@ blebgm_iop_advance_db_size      , SYMBOL ,      PUBLIC,      0,                 
 blebgm_iopDataEntries           , SYMBOL ,      PUBLIC,      0,                            ,              1
 blebgm_getHostData              , SYMBOL ,      PUBLIC,      0,                            ,              1
 blebgm_setupTargetAdrInScanRsp  , SYMBOL ,      PUBLIC,      0,                            ,              1
+sfi_enterDeepPowerDown          , SYMBOL ,      PUBLIC,      0,                            ,              1
+sfi_exitDeepPowerDown           , SYMBOL ,      PUBLIC,      0,                            ,              1
+sfi_SetWriteProtect_ON          , SYMBOL ,      PUBLIC,      0,                            ,              1
+sfi_SetWriteProtect_OFF         , SYMBOL ,      PUBLIC,      0,                            ,              1
+sfi_WriteProtectConfig          , SYMBOL ,      PUBLIC,      0,                            ,              1
+config_VS_Write                 , SYMBOL ,      PUBLIC,      0,                            ,              1
+patch_install                   , SYMBOL ,      PUBLIC,      0,                            ,              1

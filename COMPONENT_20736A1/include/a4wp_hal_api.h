@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
+ * Copyright 2016-2024, Cypress Semiconductor Corporation (an Infineon company) or
  * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
  *
  * This software, including source code, documentation and related
@@ -194,7 +194,7 @@ A4WP_HAL_STATUS a4wp_hal_read_pmu_reg(UINT16 reg_addr, UINT8 *p_data, UINT16 len
 A4WP_HAL_STATUS a4wp_hal_write_pmu_reg(UINT16 reg_addr, UINT8 *p_data, UINT16 length);
 
 /* Allows the app to know the PMU mode for the tri-mode support.
- * Note: Application need to handle only A4WP protocol to setup the BLE related configurations.
+ * Note: Application need to handle only A4WP protocol to setup the LE related configurations.
  * Params: None
  * Returns: A4WP_HAL_WPT_PROTOCOL_TYPE value.
  */

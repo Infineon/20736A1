@@ -35,13 +35,12 @@ DevicePreset "20736 Serial Flash"
 	DLConfigEEPROMAccessSpeed = 100
 	DLConfigVSOffset = 0
 	ConfigDSLocation = 16384
-	ConfigDS2Location = 270336
 	DLConfigSSLocation = 0
 	DLConfigIncludeBTWSecurityKey = 0
 	DLConfigVSLocation = 8192
 	DLConfigVSLength = 4096
 	DLConfigRemoteDeviceCount = 0
-	DLConfigBD_ADDRBase = "20736A1*****"
+	DLConfigBD_ADDRBase = "20736A10****"
 	DLConfigFixedBD_ADDRFlag = "Can change"
 	OTAFWUAckAllRecords = 0
 	OTAFWUUpdateFirmware = 1
